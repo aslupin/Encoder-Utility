@@ -1,0 +1,3 @@
+x264
+--pass 1 --bitrate 980 --stats ".stats" --output "NUL" "input_std"
+NULL

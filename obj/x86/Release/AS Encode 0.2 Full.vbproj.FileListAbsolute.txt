@@ -1,0 +1,13 @@
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\bin\Release\AS Encode 0.3 Zixmar+Fansub.exe.config
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\bin\Release\AS Encode 0.3 Zixmar+Fansub.exe
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\bin\Release\AS Encode 0.3 Zixmar+Fansub.pdb
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\bin\Release\AS Encode 0.3 Zixmar+Fansub.xml
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\obj\x86\Release\ResolveAssemblyReference.cache
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\obj\x86\Release\WindowsApplication1.Form1.resources
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\obj\x86\Release\WindowsApplication1.Form2.resources
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\obj\x86\Release\WindowsApplication1.Resources.resources
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\obj\x86\Release\GenerateResource.read.1.tlog
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\obj\x86\Release\GenerateResource.write.1.tlog
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\obj\x86\Release\AS Encode 0.3 Zixmar+Fansub.exe
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\obj\x86\Release\AS Encode 0.3 Zixmar+Fansub.xml
+D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\obj\x86\Release\AS Encode 0.3 Zixmar+Fansub.pdb

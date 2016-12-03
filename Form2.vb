@@ -1,5 +1,7 @@
 ﻿Imports System.IO
-
+Imports System.Security.Permissions
+Imports System.Text.RegularExpressions
+Imports System.Threading
 Public Class Form2
     Dim path As String
     Dim drag As Boolean = False

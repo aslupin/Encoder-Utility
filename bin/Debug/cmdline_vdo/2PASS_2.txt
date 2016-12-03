@@ -1,0 +1,3 @@
+x264
+--pass 2 --bitrate 980 --stats ".stats" --output "out_std" "input_std"
+.mp4 .mp4
