@@ -90,6 +90,7 @@ Partial Class Form1
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Process1 = New System.Diagnostics.Process()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -101,7 +102,6 @@ Partial Class Form1
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Bgw1 = New System.ComponentModel.BackgroundWorker()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -896,6 +896,17 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(870, 27)
         Me.Panel1.TabIndex = 15
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label14.Location = New System.Drawing.Point(370, 5)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(79, 13)
+        Me.Label14.TabIndex = 34
+        Me.Label14.Text = "AviSynth Editor"
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -903,9 +914,9 @@ Partial Class Form1
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label4.Location = New System.Drawing.Point(301, 5)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 13)
+        Me.Label4.Size = New System.Drawing.Size(63, 13)
         Me.Label4.TabIndex = 33
-        Me.Label4.Text = "Settings"
+        Me.Label4.Text = "Script Editor"
         '
         'Label31
         '
@@ -1002,17 +1013,6 @@ Partial Class Form1
         '
         'Bgw1
         '
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label14.Location = New System.Drawing.Point(353, 5)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(79, 13)
-        Me.Label14.TabIndex = 34
-        Me.Label14.Text = "AviSynth Editor"
         '
         'Form1
         '
