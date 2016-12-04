@@ -407,7 +407,11 @@ Public Class Form1
         RichTextBox1.ForeColor = Color.WhiteSmoke
         Dim goto_arg As String
         Dim nofen As Integer
+        Dim N1pass As String
         For nofen = 1 To nOfQueue
+            If nOfQueue = 1 Then
+
+            End If
             Dim std_typeEn As String() = OutType(nofen).Split(" ")
             If std_typeEn(0) <> "NULL" Then
                 TextBox6.Text = TextBox6.Text.Replace(std_typeEn(0), std_typeEn(1))
