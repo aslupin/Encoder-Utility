@@ -407,16 +407,31 @@ Public Class Form1
         RichTextBox1.ForeColor = Color.WhiteSmoke
         Dim goto_arg As String
         Dim nofen As Integer
-        Dim N1pass As String
+        Dim N1pass(20) As String
+        Dim S1pass(20) As String
+        S1pass(1) = TextBox3.Text
+        N1pass(1) = TextBox6.Text
+
         For nofen = 1 To nOfQueue
+
             If nOfQueue = 1 Then
 
             End If
             Dim std_typeEn As String() = OutType(nofen).Split(" ")
             If std_typeEn(0) <> "NULL" Then
-                TextBox6.Text = TextBox6.Text.Replace(std_typeEn(0), std_typeEn(1))
+                N1pass(nofen) = N1pass(nofen).Replace(std_typeEn(0), std_typeEn(1))
+
+
             End If
-            goto_arg = arguments_process(nofen).Replace("out_std", TextBox6.Text).Replace("input_std", TextBox3.Text)
+
+
+            '  goto_arg = arguments_process(nofen).Replace("out_std", TextBox6.Text).Replace("input_std", TextBox3.Text)
+            If nofen = nOfQueue Then
+                goto_arg = arguments_process(nofen).Replace("out_std", TextBox6.Text).Replace("input_std", N1pass(nofen))
+            Else
+                goto_arg = arguments_process(nofen).Replace("out_std", N1pass(nofen)).Replace("input_std", S1pass(nofen))
+            End If
+            S1pass(nofen + 1) = N1pass(nofen)
 
             oStartInfoQ.FileName = path_process(nofen)
             oStartInfoQ.Arguments = goto_arg
@@ -441,7 +456,7 @@ Public Class Form1
             Loop Until oProcess_Q.HasExited And strFFOUT = Nothing Or strFFOUT = ""
 
         Next
-
+        ' System.IO.File.Delete(N1pass)
         RichTextBox1.Text = "Status : Completed."
         Panel2.Size = New Size(872, 31)
         ' RichTextBox1.BackColor = Me.BackColor
