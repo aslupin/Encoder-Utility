@@ -419,7 +419,12 @@ Public Class Form1
             End If
             Dim std_typeEn As String() = OutType(nofen).Split(" ")
             If std_typeEn(0) <> "NULL" Then
-                N1pass(nofen) = N1pass(nofen).Replace(std_typeEn(0), std_typeEn(1))
+                If nofen = 1 Then
+                    N1pass(nofen) = N1pass(nofen).Replace(std_typeEn(0), std_typeEn(1))
+                Else
+                    N1pass(nofen) = N1pass(nofen - 1).Replace(std_typeEn(0), std_typeEn(1))
+                End If
+
 
 
             End If
@@ -427,7 +432,7 @@ Public Class Form1
 
             '  goto_arg = arguments_process(nofen).Replace("out_std", TextBox6.Text).Replace("input_std", TextBox3.Text)
             If nofen = nOfQueue Then
-                goto_arg = arguments_process(nofen).Replace("out_std", TextBox6.Text).Replace("input_std", N1pass(nofen))
+                goto_arg = arguments_process(nofen).Replace("out_std", TextBox6.Text).Replace("input_std", S1pass(nofen))
             Else
                 goto_arg = arguments_process(nofen).Replace("out_std", N1pass(nofen)).Replace("input_std", S1pass(nofen))
             End If
@@ -455,6 +460,10 @@ Public Class Form1
                 RichTextBox1.Text = "Status : " + parts(nofen) + "  " + strFFOUT
             Loop Until oProcess_Q.HasExited And strFFOUT = Nothing Or strFFOUT = ""
 
+        Next
+
+        For nofen = 1 To nOfQueue - 1
+            System.IO.File.Delete(N1pass(nofen))
         Next
         ' System.IO.File.Delete(N1pass)
         RichTextBox1.Text = "Status : Completed."
