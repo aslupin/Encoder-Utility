@@ -26,21 +26,6 @@
     <Setting Name="Enc" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Aubit" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="QNero" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="BitNr" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="AF" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="chk5" Type="System.Windows.Forms.CheckState" Scope="User">
-      <Value Profile="(Default)">Unchecked</Value>
-    </Setting>
     <Setting Name="User" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
@@ -72,6 +57,12 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="FileLog3" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ComboCm" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Chcom_CmSc" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

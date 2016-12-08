@@ -153,66 +153,6 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property Aubit() As String
-            Get
-                Return CType(Me("Aubit"),String)
-            End Get
-            Set
-                Me("Aubit") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property QNero() As String
-            Get
-                Return CType(Me("QNero"),String)
-            End Get
-            Set
-                Me("QNero") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property BitNr() As String
-            Get
-                Return CType(Me("BitNr"),String)
-            End Get
-            Set
-                Me("BitNr") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property AF() As String
-            Get
-                Return CType(Me("AF"),String)
-            End Get
-            Set
-                Me("AF") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Unchecked")>  _
-        Public Property chk5() As Global.System.Windows.Forms.CheckState
-            Get
-                Return CType(Me("chk5"),Global.System.Windows.Forms.CheckState)
-            End Get
-            Set
-                Me("chk5") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property User() As String
             Get
                 Return CType(Me("User"),String)
@@ -339,6 +279,30 @@ Namespace My
             End Get
             Set
                 Me("FileLog3") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property ComboCm() As String
+            Get
+                Return CType(Me("ComboCm"),String)
+            End Get
+            Set
+                Me("ComboCm") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Chcom_CmSc() As String
+            Get
+                Return CType(Me("Chcom_CmSc"),String)
+            End Get
+            Set
+                Me("Chcom_CmSc") = value
             End Set
         End Property
     End Class

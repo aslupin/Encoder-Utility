@@ -43,6 +43,10 @@ Partial Class Form2
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -111,19 +115,19 @@ Partial Class Form2
         Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.05!)
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(484, 39)
+        Me.ComboBox2.Location = New System.Drawing.Point(534, 55)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(290, 20)
+        Me.ComboBox2.Size = New System.Drawing.Size(242, 20)
         Me.ComboBox2.TabIndex = 22
         '
         'TextBox1
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.55!)
-        Me.TextBox1.Location = New System.Drawing.Point(12, 65)
+        Me.TextBox1.Location = New System.Drawing.Point(12, 81)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(764, 196)
+        Me.TextBox1.Size = New System.Drawing.Size(764, 180)
         Me.TextBox1.TabIndex = 21
         '
         'Panel1
@@ -142,40 +146,40 @@ Partial Class Form2
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label8.Location = New System.Drawing.Point(14, 53)
+        Me.Label8.Location = New System.Drawing.Point(14, 36)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(97, 13)
+        Me.Label8.Size = New System.Drawing.Size(76, 13)
         Me.Label8.TabIndex = 28
-        Me.Label8.Text = "Audio_cmdline   >>"
+        Me.Label8.Text = "Audio_settings"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label7.Location = New System.Drawing.Point(14, 33)
+        Me.Label7.Location = New System.Drawing.Point(14, 16)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(97, 13)
+        Me.Label7.Size = New System.Drawing.Size(76, 13)
         Me.Label7.TabIndex = 1
-        Me.Label7.Text = "Video_cmdline   >>"
+        Me.Label7.Text = "Video_settings"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label5.Location = New System.Drawing.Point(14, 15)
+        Me.Label5.Location = New System.Drawing.Point(14, 57)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(96, 13)
+        Me.Label5.Size = New System.Drawing.Size(75, 13)
         Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Queue_scripts   >>"
+        Me.Label5.Text = "Other_settings"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(381, 42)
+        Me.Label9.Location = New System.Drawing.Point(455, 29)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(90, 13)
+        Me.Label9.Size = New System.Drawing.Size(39, 13)
         Me.Label9.TabIndex = 28
-        Me.Label9.Text = "Queue_scripts >>"
+        Me.Label9.Text = "Scripts"
         '
         'Panel2
         '
@@ -257,12 +261,53 @@ Partial Class Form2
         Me.Label11.TabIndex = 36
         Me.Label11.Text = "Tools_path"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.05!)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(534, 27)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(242, 20)
+        Me.ComboBox1.TabIndex = 37
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(455, 57)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(73, 13)
+        Me.Label12.TabIndex = 38
+        Me.Label12.Text = "Command line"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(442, 28)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(13, 13)
+        Me.Label13.TabIndex = 39
+        Me.Label13.Text = ">"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(443, 55)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(13, 13)
+        Me.Label14.TabIndex = 40
+        Me.Label14.Text = ">"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(786, 269)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
@@ -313,4 +358,8 @@ Partial Class Form2
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
 End Class

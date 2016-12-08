@@ -64,18 +64,11 @@ Public Class Form1
     Dim pass As Long
     Dim p1 As Long
     Dim Encmode As String
-    Dim Abit As String
-    Dim ab As String
-    Dim abb As String
-    Dim QMNero As String
-    Dim MNero As String
-    Dim Q1Nero As String
-    Dim BitNero As String
-    Dim AFt As String
-    Dim useAf As String
-    Dim Delay As String
-    Dim Dlay As String
-    Dim ArDlay As String
+
+
+
+
+
     Dim Fcan As Long
     Dim xerNum As Integer
     'Dim TextLabel16 As String
@@ -220,7 +213,7 @@ Public Class Form1
     '-----------------FC Aotomatic-------------
     '
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        Panel3.Size = New Size(0, 0)
         Panel2.Size = New Size(0, 0)
         RichTextBox1.Text = "Status : - "
         RichTextBox1.BackColor = System.Drawing.SystemColors.ControlLight
@@ -239,23 +232,19 @@ Public Class Form1
         Me.Opacity = 0
 
         ' RichTextBox1.Text = "[Status] : -"
-        AFt = My.Settings.AF
-        ComboBox5.SelectedItem = AFt
-        QMNero = My.Settings.QNero
-        ComboBox4.SelectedItem = QMNero
-        Abit = My.Settings.Aubit
-        ComboBox2.SelectedItem = Abit
+
+
+
+
         Encmode = My.Settings.Enc
         '  ComboBox1.SelectedItem = Encmode
 
 
         ' Form5.ComboBox1.SelectedItem = My.Settings.ComboAvs
-        FPS = My.Settings.FPSSave
-        BitNero = My.Settings.BitNr
-        DomainUpDown2.Text = BitNero
+
         BitRx264 = My.Settings.Bitx264
         'DomainUpDown1.Text = BitRx264
-        Me.CheckBox3.Checked = My.Settings.chk5
+
         ' Me.CheckBox2.Checked = My.Settings.chk4
         'Me.CheckBox1.Checked = My.Settings.chk3
         Logfile = My.Settings.FileLog
@@ -362,7 +351,7 @@ Public Class Form1
 
     End Sub
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
-        text_queue = System.IO.File.ReadAllText(".\scripts\" + ComboBox1.SelectedItem.ToString() + ".txt")
+        text_queue = System.IO.File.ReadAllText(".\scripts_vdo\" + ComboBox1.SelectedItem.ToString() + ".txt")
 
         Bgw1.RunWorkerAsync()
         'Dim T1 As New Thread(AddressOf Enprocess_2) 'Enprocess
@@ -376,7 +365,7 @@ Public Class Form1
     End Sub
     Private Sub Enprocess_2()
 
-
+        RichTextBox1.Text = "Status : loading.."
         Control.CheckForIllegalCrossThreadCalls = False
         Dim strArr_queue(12) As String
         text_queue = text_queue.Replace("MODE ", "")
@@ -432,12 +421,18 @@ Public Class Form1
 
             '  goto_arg = arguments_process(nofen).Replace("out_std", TextBox6.Text).Replace("input_std", TextBox3.Text)
             If nofen = nOfQueue Then
-                goto_arg = arguments_process(nofen).Replace("out_std", TextBox6.Text).Replace("input_std", S1pass(nofen))
+                goto_arg = arguments_process(nofen).Replace("input_std", S1pass(nofen)).Replace("out_std", N1pass(nofen))
             Else
-                goto_arg = arguments_process(nofen).Replace("out_std", N1pass(nofen)).Replace("input_std", S1pass(nofen))
+                goto_arg = arguments_process(nofen).Replace("input_std", S1pass(nofen)).Replace("out_std", N1pass(nofen))
             End If
-            S1pass(nofen + 1) = N1pass(nofen)
 
+            If std_typeEn(0) <> "NULL" Then
+                S1pass(nofen + 1) = N1pass(nofen)
+
+            Else
+                S1pass(nofen + 1) = S1pass(nofen)
+            End If
+            MsgBox(goto_arg)
             oStartInfoQ.FileName = path_process(nofen)
             oStartInfoQ.Arguments = goto_arg
             oStartInfoQ.UseShellExecute = False
@@ -462,9 +457,9 @@ Public Class Form1
 
         Next
 
-        For nofen = 1 To nOfQueue - 1
-            System.IO.File.Delete(N1pass(nofen))
-        Next
+        '    For nofen = 1 To nOfQueue - 1
+        'System.IO.File.Delete(N1pass(nofen))
+        '  Next
         ' System.IO.File.Delete(N1pass)
         RichTextBox1.Text = "Status : Completed."
         Panel2.Size = New Size(872, 31)
@@ -561,9 +556,9 @@ Public Class Form1
 
         iplog = TextBox7.Text
         '  iplog = iplog.Replace("\", "/")
-        ArDlay = iplog
-        ArDlay = ArDlay.Replace(".mp4", "_De_audio.mp4")
-        ArDlay = ArDlay.Replace(".mkv", "_De_audio.mkv")
+        ' ArDlay = iplog
+        '  ArDlay = ArDlay.Replace(".mp4", "_De_audio.mp4")
+        '  ArDlay = ArDlay.Replace(".mkv", "_De_audio.mkv")
         TextBox8.Text = myFileDlog1.FileName
         TextBox8.Text = TextBox8.Text.Replace(".mp4", "_audio.mp4")
         TextBox8.Text = TextBox8.Text.Replace(".mkv", "_audio.mp4")
@@ -574,75 +569,75 @@ Public Class Form1
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
 
 
-        If Delay Mod 2 = 0 Then
+        ' If Delay Mod 2 = 0 Then
 
-            Dim oProcess As New Process()
-            Dim oStartInfo As New ProcessStartInfo()
-            oStartInfo.FileName = ".\tools\ffmpeg\ffmpeg.exe"
-            oStartInfo.Arguments = "-i """ + iplog & """ -ab " + abb & " """ + oplog & """"
-            '-i "iplog" -ab abb "oplog"
-            oStartInfo.UseShellExecute = False
-            oStartInfo.CreateNoWindow = False
-            oStartInfo.RedirectStandardOutput = True
-            Status2.Text = "[Status] : --FFMPEG | Encoding audio..."
-            oProcess.StartInfo = oStartInfo
-            oProcess.Start()
-            oProcess.WaitForExit()
+        Dim oProcess As New Process()
+        Dim oStartInfo As New ProcessStartInfo()
+        oStartInfo.FileName = ".\tools\ffmpeg\ffmpeg.exe"
+        '  oStartInfo.Arguments = "-i """ + iplog & """ -ab " + abb & " """ + oplog & """"
+        '-i "iplog" -ab abb "oplog"
+        oStartInfo.UseShellExecute = False
+        oStartInfo.CreateNoWindow = False
+        oStartInfo.RedirectStandardOutput = True
+        ' Status2.Text = "[Status] : --FFMPEG | Encoding audio..."
+        oProcess.StartInfo = oStartInfo
+        oProcess.Start()
+        oProcess.WaitForExit()
 
-            oStartInfo.FileName = ".\tools\neroaac\neroAacEnc.exe"
-            oStartInfo.Arguments = "-ignorelength " + Q1Nero & " " + BitNero & " " + useAf & " -if """ + oplog & """ -of """ + TextBox8.Text & """"
-            '-ignorelength Q1Nero BitNero useAf -if "oplog" -of "TextBox8.Text"
-            oStartInfo.UseShellExecute = False
-            oStartInfo.CreateNoWindow = False
-            oStartInfo.RedirectStandardOutput = True
-            Status2.Text = "[Status] : --NeroAacEnc | Encoding audio..."
-            oProcess.StartInfo = oStartInfo
-            oProcess.Start()
-            oProcess.WaitForExit()
+        oStartInfo.FileName = ".\tools\neroaac\neroAacEnc.exe"
+        '    oStartInfo.Arguments = "-ignorelength " + Q1Nero & " " + BitNero & " " + useAf & " -if """ + oplog & """ -of """ + TextBox8.Text & """"
+        '-ignorelength Q1Nero BitNero useAf -if "oplog" -of "TextBox8.Text"
+        oStartInfo.UseShellExecute = False
+        oStartInfo.CreateNoWindow = False
+        oStartInfo.RedirectStandardOutput = True
+        '  Status2.Text = "[Status] : --NeroAacEnc | Encoding audio..."
+        oProcess.StartInfo = oStartInfo
+        oProcess.Start()
+        oProcess.WaitForExit()
 
-            System.IO.File.Delete(oplog)
-            Status2.Text = "[Status] : Encoded."
+        System.IO.File.Delete(oplog)
+        'Status2.Text = "[Status] : Encoded."
 
-        End If
-
-
-        If Delay Mod 2 = 1 Then
-            Dim oProcess As New Process()
-            Dim oStartInfo As New ProcessStartInfo()
-            oStartInfo.FileName = ".\tools\mp4box\mp4box.exe"
-            oStartInfo.Arguments = "-delay 2=" + Dlay & " -add """ + iplog & """ """ + ArDlay & """"
-            oStartInfo.UseShellExecute = False
-            oStartInfo.CreateNoWindow = False
-            oStartInfo.RedirectStandardOutput = True
-            Status2.Text = "[Status] : --MP4BOX | Encoding audio..."
-            oProcess.StartInfo = oStartInfo
-            oProcess.Start()
-            oProcess.WaitForExit()
+        '  End If
 
 
-            oStartInfo.FileName = ".\tools\ffmpeg\ffmpeg.exe"
-            oStartInfo.Arguments = "-i """ + ArDlay & """ -ab " + abb & " """ + oplog & """"
-            oStartInfo.UseShellExecute = False
-            oStartInfo.CreateNoWindow = False
-            oStartInfo.RedirectStandardOutput = True
-            Status2.Text = "[Status] : --FFMPEG | Encoding audio..."
-            oProcess.StartInfo = oStartInfo
-            oProcess.Start()
-            oProcess.WaitForExit()
+        ' If Delay Mod 2 = 1 Then
+        'Dim oProcess As New Process()
+        'Dim oStartInfo As New ProcessStartInfo()
+        oStartInfo.FileName = ".\tools\mp4box\mp4box.exe"
+        ' oStartInfo.Arguments = "-delay 2=" + Dlay & " -add """ + iplog & """ """ + ArDlay & """"
+        oStartInfo.UseShellExecute = False
+        oStartInfo.CreateNoWindow = False
+        oStartInfo.RedirectStandardOutput = True
+        ' Status2.Text = "[Status] : --MP4BOX | Encoding audio..."
+        oProcess.StartInfo = oStartInfo
+        oProcess.Start()
+        oProcess.WaitForExit()
 
-            oStartInfo.FileName = ".\tools\neroaac\neroAacEnc.exe"
-            oStartInfo.Arguments = "-ignorelength " + Q1Nero & " " + BitNero & " " + useAf & " -if """ + oplog & """ -of """ + TextBox8.Text & """"
-            oStartInfo.UseShellExecute = False
-            oStartInfo.CreateNoWindow = False
-            oStartInfo.RedirectStandardOutput = True
-            Status2.Text = "[Status] : --NeroAacEnc | Encoding audio..."
-            oProcess.StartInfo = oStartInfo
-            oProcess.Start()
-            oProcess.WaitForExit()
 
-            System.IO.File.Delete(oplog)
-            Status2.Text = "[Status] : Encoded."
-        End If
+        oStartInfo.FileName = ".\tools\ffmpeg\ffmpeg.exe"
+        ' oStartInfo.Arguments = "-i """ + ArDlay & """ -ab " + abb & " """ + oplog & """"
+        oStartInfo.UseShellExecute = False
+        oStartInfo.CreateNoWindow = False
+        oStartInfo.RedirectStandardOutput = True
+        ' Status2.Text = "[Status] : --FFMPEG | Encoding audio..."
+        oProcess.StartInfo = oStartInfo
+        oProcess.Start()
+        oProcess.WaitForExit()
+
+        oStartInfo.FileName = ".\tools\neroaac\neroAacEnc.exe"
+        '  oStartInfo.Arguments = "-ignorelength " + Q1Nero & " " + BitNero & " " + useAf & " -if """ + oplog & """ -of """ + TextBox8.Text & """"
+        oStartInfo.UseShellExecute = False
+        oStartInfo.CreateNoWindow = False
+        oStartInfo.RedirectStandardOutput = True
+        '  Status2.Text = "[Status] : --NeroAacEnc | Encoding audio..."
+        oProcess.StartInfo = oStartInfo
+        oProcess.Start()
+        oProcess.WaitForExit()
+
+        System.IO.File.Delete(oplog)
+        '   Status2.Text = "[Status] : Encoded."
+        ' End If
 
 
     End Sub
@@ -734,127 +729,12 @@ Public Class Form1
         My.Settings.Enc = Encmode
     End Sub
 
-    Private Sub ComboBox2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
-        ComboBox2.SelectedItem.ToString()
-        If ComboBox2.SelectedItem = "384 kbps" Then
-            Abit = "384 kbps"
-            abb = "384"
-            ab = 1
 
-        End If
-        If ComboBox2.SelectedItem = "160 kbps" Then
-            Abit = "160 kbps"
-            abb = "160"
-            ab = 2
 
-        End If
-        If ComboBox2.SelectedItem = "128 kbps" Then
-            Abit = "128 kbps"
-            abb = "128"
-            ab = 3
 
-        End If
-        If ComboBox2.SelectedItem = "64 kbps" Then
-            Abit = "64 kbps"
-            abb = "64"
-            ab = 4
 
-        End If
 
-        My.Settings.Aubit = Abit
-    End Sub
 
-    Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click
-        If Delay Mod 2 = 1 Then
-            Dim Textau As String = "MP4BOX" & Environment.NewLine &
-   "-delay 2=" + Dlay & " -add """ + iplog & """ """ + ArDlay & """" & Environment.NewLine &
- " " & Environment.NewLine &
-"FFMPEG" & Environment.NewLine &
-               "-i """ + ArDlay & """ -ab " + abb & " """ + oplog & """" & Environment.NewLine &
-               " " & Environment.NewLine &
-               "NeroAacEnc" & Environment.NewLine &
-           "-ignorelength " + Q1Nero & " " + BitNero & " " + useAf & " -if """ + oplog & """ -of """ + TextBox8.Text & """"
-            MsgBox(Textau)
-        End If
-        If Delay Mod 2 = 0 Then
-            Dim Textau As String = "FFMPEG" & Environment.NewLine &
-               "-i """ + iplog & """ -ab " + abb & " """ + oplog & """" & Environment.NewLine &
-               " " & Environment.NewLine &
-               "NeroAacEnc" & Environment.NewLine &
-           "-ignorelength " + Q1Nero & " " + BitNero & " " + useAf & " -if """ + oplog & """ -of """ + TextBox8.Text & """"
-            MsgBox(Textau)
-        End If
-    End Sub
-
-    Private Sub ComboBox4_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox4.SelectedIndexChanged
-        ComboBox4.SelectedItem.ToString()
-        If ComboBox4.SelectedItem = "VBR" Then
-            QMNero = "VBR"
-            Q1Nero = "-q"
-            ' abb = "384"
-            MNero = 1
-
-        End If
-        If ComboBox4.SelectedItem = "ABR" Then
-            QMNero = "ABR"
-            Q1Nero = "-br"
-            ' abb = "160"
-            MNero = 2
-
-        End If
-        If ComboBox4.SelectedItem = "CBR" Then
-            QMNero = "CBR"
-            Q1Nero = "-cbr"
-            'abb = "128"
-            MNero = 3
-
-        End If
-
-        My.Settings.QNero = QMNero
-    End Sub
-
-    Private Sub DomainUpDown2_SelectedItemChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DomainUpDown2.SelectedItemChanged
-        BitNero = DomainUpDown2.Text
-        My.Settings.BitNr = BitNero
-    End Sub
-
-    Private Sub ComboBox5_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox5.SelectedIndexChanged
-        ComboBox5.SelectedItem.ToString()
-        If ComboBox5.SelectedItem = "LC AAC" Then
-            AFt = "LC AAC"
-            useAf = "-lc"
-            ' abb = "384"
-            ' MNero = 1
-
-        End If
-        If ComboBox5.SelectedItem = "HE AAC" Then
-            AFt = "HE AAC"
-            useAf = "-he"
-            ' abb = "160"
-            ' MNero = 2
-
-        End If
-        If ComboBox5.SelectedItem = "HEv2 AAC" Then
-            AFt = "HEv2 AAC"
-            useAf = "-cbr"
-            'abb = "128"
-            'MNero = 3
-
-        End If
-
-        My.Settings.AF = AFt
-    End Sub
-
-    Private Sub CheckBox3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox3.CheckedChanged
-#If Delay = 0 Then
-        Delay = Delay + 1
-#End If
-        My.Settings.chk5 = Me.CheckBox3.CheckState
-    End Sub
-
-    Private Sub TextBox12_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox12.TextChanged
-        Dlay = TextBox12.Text
-    End Sub
 
     Private Sub Label29_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label29.Click
         Me.WindowState = FormWindowState.Minimized
@@ -905,9 +785,12 @@ Public Class Form1
         oForm = Nothing
     End Sub
 
+    Private Sub ComboBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox2.MouseClick
+
+    End Sub
     Private Sub ComboBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox1.MouseClick
         ComboBox1.Items.Clear()
-        Dim dir = ".\scripts"
+        Dim dir = ".\scripts_vdo"
         For Each file As String In System.IO.Directory.GetFiles(dir)
             ComboBox1.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
         Next

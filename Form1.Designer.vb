@@ -52,28 +52,18 @@ Partial Class Form1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.DomainUpDown2 = New System.Windows.Forms.DomainUpDown()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Label24 = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Status2 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Button20 = New System.Windows.Forms.Button()
@@ -108,7 +98,7 @@ Partial Class Form1
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -428,8 +418,18 @@ Partial Class Form1
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.TabPage3.Controls.Add(Me.GroupBox3)
-        Me.TabPage3.Controls.Add(Me.Status2)
+        Me.TabPage3.Controls.Add(Me.RichTextBox2)
+        Me.TabPage3.Controls.Add(Me.Panel3)
+        Me.TabPage3.Controls.Add(Me.PictureBox3)
+        Me.TabPage3.Controls.Add(Me.Label16)
+        Me.TabPage3.Controls.Add(Me.ComboBox2)
+        Me.TabPage3.Controls.Add(Me.Button12)
+        Me.TabPage3.Controls.Add(Me.Label11)
+        Me.TabPage3.Controls.Add(Me.TextBox8)
+        Me.TabPage3.Controls.Add(Me.TextBox7)
+        Me.TabPage3.Controls.Add(Me.Label12)
+        Me.TabPage3.Controls.Add(Me.Button13)
+        Me.TabPage3.Controls.Add(Me.Button14)
         Me.TabPage3.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
@@ -437,178 +437,47 @@ Partial Class Form1
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Enc2"
         '
-        'GroupBox3
+        'RichTextBox2
         '
-        Me.GroupBox3.Controls.Add(Me.TextBox12)
-        Me.GroupBox3.Controls.Add(Me.Label28)
-        Me.GroupBox3.Controls.Add(Me.Label27)
-        Me.GroupBox3.Controls.Add(Me.CheckBox3)
-        Me.GroupBox3.Controls.Add(Me.DomainUpDown2)
-        Me.GroupBox3.Controls.Add(Me.ComboBox5)
-        Me.GroupBox3.Controls.Add(Me.Label26)
-        Me.GroupBox3.Controls.Add(Me.ComboBox4)
-        Me.GroupBox3.Controls.Add(Me.Label25)
-        Me.GroupBox3.Controls.Add(Me.Button15)
-        Me.GroupBox3.Controls.Add(Me.Label24)
-        Me.GroupBox3.Controls.Add(Me.ComboBox2)
-        Me.GroupBox3.Controls.Add(Me.Label22)
-        Me.GroupBox3.Controls.Add(Me.Button12)
-        Me.GroupBox3.Controls.Add(Me.Label11)
-        Me.GroupBox3.Controls.Add(Me.TextBox7)
-        Me.GroupBox3.Controls.Add(Me.Button13)
-        Me.GroupBox3.Controls.Add(Me.Button14)
-        Me.GroupBox3.Controls.Add(Me.Label12)
-        Me.GroupBox3.Controls.Add(Me.TextBox8)
-        Me.GroupBox3.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.GroupBox3.Location = New System.Drawing.Point(15, 25)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(620, 151)
-        Me.GroupBox3.TabIndex = 23
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Audio Encoding | FFMPEG _ NeroAacEnc"
+        Me.RichTextBox2.BackColor = System.Drawing.Color.DimGray
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.55!)
+        Me.RichTextBox2.ForeColor = System.Drawing.Color.Black
+        Me.RichTextBox2.Location = New System.Drawing.Point(30, 213)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
+        Me.RichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.RichTextBox2.Size = New System.Drawing.Size(814, 23)
+        Me.RichTextBox2.TabIndex = 50
+        Me.RichTextBox2.Text = ""
         '
-        'TextBox12
+        'Panel3
         '
-        Me.TextBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 4.5!)
-        Me.TextBox12.Location = New System.Drawing.Point(412, 8)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(61, 14)
-        Me.TextBox12.TabIndex = 41
+        Me.Panel3.BackColor = System.Drawing.Color.DimGray
+        Me.Panel3.Location = New System.Drawing.Point(-4, 206)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(872, 31)
+        Me.Panel3.TabIndex = 52
         '
-        'Label28
+        'PictureBox3
         '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Label28.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Label28.Location = New System.Drawing.Point(479, 10)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(18, 12)
-        Me.Label28.TabIndex = 40
-        Me.Label28.Text = "ms"
+        Me.PictureBox3.ErrorImage = Nothing
+        Me.PictureBox3.Image = Global.WindowsApplication1.My.Resources.Resources.ZixF2
+        Me.PictureBox3.Location = New System.Drawing.Point(25, 132)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(215, 60)
+        Me.PictureBox3.TabIndex = 51
+        Me.PictureBox3.TabStop = False
         '
-        'Label27
+        'Label16
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Label27.Location = New System.Drawing.Point(475, 130)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(25, 12)
-        Me.Label27.TabIndex = 38
-        Me.Label27.Text = "kbps"
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 5.5!)
-        Me.CheckBox3.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.CheckBox3.Location = New System.Drawing.Point(363, 10)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(43, 13)
-        Me.CheckBox3.TabIndex = 39
-        Me.CheckBox3.Text = " Delay"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'DomainUpDown2
-        '
-        Me.DomainUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.DomainUpDown2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.DomainUpDown2.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.DomainUpDown2.Items.Add("0.15")
-        Me.DomainUpDown2.Items.Add("0.35")
-        Me.DomainUpDown2.Items.Add("0.5")
-        Me.DomainUpDown2.Items.Add("0.55")
-        Me.DomainUpDown2.Items.Add("0.75")
-        Me.DomainUpDown2.Items.Add("0.95")
-        Me.DomainUpDown2.Items.Add("8000")
-        Me.DomainUpDown2.Items.Add("9000")
-        Me.DomainUpDown2.Items.Add("100000")
-        Me.DomainUpDown2.Items.Add("128000")
-        Me.DomainUpDown2.Items.Add("260000")
-        Me.DomainUpDown2.Items.Add("300000")
-        Me.DomainUpDown2.Items.Add("320000")
-        Me.DomainUpDown2.Items.Add("400000")
-        Me.DomainUpDown2.Items.Add("")
-        Me.DomainUpDown2.Location = New System.Drawing.Point(383, 125)
-        Me.DomainUpDown2.Name = "DomainUpDown2"
-        Me.DomainUpDown2.Size = New System.Drawing.Size(86, 20)
-        Me.DomainUpDown2.TabIndex = 37
-        '
-        'ComboBox5
-        '
-        Me.ComboBox5.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.ComboBox5.BackColor = System.Drawing.SystemColors.Window
-        Me.ComboBox5.DisplayMember = "Automated 2pass"
-        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.ComboBox5.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.ComboBox5.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.ComboBox5.Items.AddRange(New Object() {"LC AAC", "HE AAC", "HEv2 AAC"})
-        Me.ComboBox5.Location = New System.Drawing.Point(383, 92)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(70, 20)
-        Me.ComboBox5.TabIndex = 36
-        Me.ComboBox5.ValueMember = "Automated 2pass"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Label26.Location = New System.Drawing.Point(234, 95)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(143, 12)
-        Me.Label26.TabIndex = 35
-        Me.Label26.Text = "| NeroAacEnc Advanced features"
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.ComboBox4.BackColor = System.Drawing.SystemColors.Window
-        Me.ComboBox4.DisplayMember = "Automated 2pass"
-        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.ComboBox4.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.ComboBox4.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.ComboBox4.Items.AddRange(New Object() {"VBR", "ABR", "CBR"})
-        Me.ComboBox4.Location = New System.Drawing.Point(120, 122)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(84, 20)
-        Me.ComboBox4.TabIndex = 34
-        Me.ComboBox4.ValueMember = "Automated 2pass"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Label25.Location = New System.Drawing.Point(9, 125)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(93, 12)
-        Me.Label25.TabIndex = 33
-        Me.Label25.Text = "| NeroAacEnc Quality"
-        '
-        'Button15
-        '
-        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button15.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Button15.Location = New System.Drawing.Point(519, 89)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(78, 24)
-        Me.Button15.TabIndex = 30
-        Me.Button15.Text = "Show LogFlie"
-        Me.Button15.UseVisualStyleBackColor = True
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Label24.Location = New System.Drawing.Point(258, 128)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(119, 12)
-        Me.Label24.TabIndex = 31
-        Me.Label24.Text = "| NeroAacEnc Audio Bitrate "
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
+        Me.Label16.Location = New System.Drawing.Point(481, 137)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(69, 12)
+        Me.Label16.TabIndex = 31
+        Me.Label16.Text = "Encoding Mode"
         '
         'ComboBox2
         '
@@ -617,31 +486,20 @@ Partial Class Form1
         Me.ComboBox2.DisplayMember = "Automated 2pass"
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
+        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!)
         Me.ComboBox2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
         Me.ComboBox2.ImeMode = System.Windows.Forms.ImeMode.[On]
-        Me.ComboBox2.Items.AddRange(New Object() {"384 kbps", "160 kbps", "128 kbps", "64 kbps"})
-        Me.ComboBox2.Location = New System.Drawing.Point(120, 92)
+        Me.ComboBox2.Location = New System.Drawing.Point(564, 134)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(84, 20)
-        Me.ComboBox2.TabIndex = 29
+        Me.ComboBox2.Size = New System.Drawing.Size(112, 21)
+        Me.ComboBox2.TabIndex = 30
         Me.ComboBox2.ValueMember = "Automated 2pass"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Label22.Location = New System.Drawing.Point(9, 95)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(106, 12)
-        Me.Label22.TabIndex = 28
-        Me.Label22.Text = "| FFMPEG Audio Bitrate "
         '
         'Button12
         '
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Button12.Location = New System.Drawing.Point(519, 23)
+        Me.Button12.Location = New System.Drawing.Point(701, 49)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(78, 24)
         Me.Button12.TabIndex = 25
@@ -652,25 +510,45 @@ Partial Class Form1
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Label11.Location = New System.Drawing.Point(9, 29)
+        Me.Label11.Location = New System.Drawing.Point(53, 55)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(51, 12)
         Me.Label11.TabIndex = 24
         Me.Label11.Text = "Audio input"
         '
+        'TextBox8
+        '
+        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
+        Me.TextBox8.Location = New System.Drawing.Point(142, 88)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(535, 20)
+        Me.TextBox8.TabIndex = 19
+        '
         'TextBox7
         '
         Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox7.Location = New System.Drawing.Point(67, 26)
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
+        Me.TextBox7.Location = New System.Drawing.Point(142, 52)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(433, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(535, 20)
         Me.TextBox7.TabIndex = 23
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
+        Me.Label12.Location = New System.Drawing.Point(53, 91)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(57, 12)
+        Me.Label12.TabIndex = 20
+        Me.Label12.Text = "Audio output"
         '
         'Button13
         '
         Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Button13.Location = New System.Drawing.Point(519, 122)
+        Me.Button13.Location = New System.Drawing.Point(701, 131)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(78, 24)
         Me.Button13.TabIndex = 13
@@ -681,41 +559,12 @@ Partial Class Form1
         '
         Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button14.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Button14.Location = New System.Drawing.Point(519, 59)
+        Me.Button14.Location = New System.Drawing.Point(701, 85)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(78, 24)
         Me.Button14.TabIndex = 21
         Me.Button14.Text = "Save as"
         Me.Button14.UseVisualStyleBackColor = True
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Label12.Location = New System.Drawing.Point(9, 65)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(57, 12)
-        Me.Label12.TabIndex = 20
-        Me.Label12.Text = "Audio output"
-        '
-        'TextBox8
-        '
-        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox8.Location = New System.Drawing.Point(67, 62)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(433, 20)
-        Me.TextBox8.TabIndex = 19
-        '
-        'Status2
-        '
-        Me.Status2.AutoSize = True
-        Me.Status2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Status2.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Status2.Location = New System.Drawing.Point(24, 179)
-        Me.Status2.Name = "Status2"
-        Me.Status2.Size = New System.Drawing.Size(48, 12)
-        Me.Status2.TabIndex = 26
-        Me.Status2.Text = "[Status] : -"
         '
         'TabPage4
         '
@@ -1038,8 +887,7 @@ Partial Class Form1
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
@@ -1074,7 +922,6 @@ Partial Class Form1
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Button13 As System.Windows.Forms.Button
     Friend WithEvents Button14 As System.Windows.Forms.Button
@@ -1099,19 +946,6 @@ Partial Class Form1
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents Button15 As System.Windows.Forms.Button
-    Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents Label27 As System.Windows.Forms.Label
-    Friend WithEvents DomainUpDown2 As System.Windows.Forms.DomainUpDown
-    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
-    Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label30 As System.Windows.Forms.Label
@@ -1125,6 +959,10 @@ Partial Class Form1
     Friend WithEvents Bgw1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Status2 As Label
     Friend WithEvents Label14 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

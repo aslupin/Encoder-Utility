@@ -33,12 +33,13 @@ Partial Class Form6
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(296, 58)
+        Me.Button1.Location = New System.Drawing.Point(296, 69)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
@@ -49,7 +50,7 @@ Partial Class Form6
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!)
-        Me.TextBox1.Location = New System.Drawing.Point(31, 59)
+        Me.TextBox1.Location = New System.Drawing.Point(31, 70)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(244, 21)
         Me.TextBox1.TabIndex = 1
@@ -57,7 +58,7 @@ Partial Class Form6
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 9)
+        Me.Label1.Location = New System.Drawing.Point(28, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(92, 13)
         Me.Label1.TabIndex = 2
@@ -99,7 +100,7 @@ Partial Class Form6
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
-        Me.Label2.Location = New System.Drawing.Point(168, 83)
+        Me.Label2.Location = New System.Drawing.Point(168, 94)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(107, 12)
         Me.Label2.TabIndex = 6
@@ -120,8 +121,8 @@ Partial Class Form6
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"AviSynth script", "Queue script", "Video cmdline", "Audio cmdline"})
-        Me.ComboBox1.Location = New System.Drawing.Point(140, 28)
+        Me.ComboBox1.Items.AddRange(New Object() {"AviSynth script", "Other Type", "Video Type", "Audio Type"})
+        Me.ComboBox1.Location = New System.Drawing.Point(140, 39)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(135, 21)
         Me.ComboBox1.TabIndex = 8
@@ -129,11 +130,22 @@ Partial Class Form6
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(61, 31)
+        Me.Label4.Location = New System.Drawing.Point(61, 42)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 13)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Data type :"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.05!)
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"script", "cmdline"})
+        Me.ComboBox2.Location = New System.Drawing.Point(140, 13)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(71, 20)
+        Me.ComboBox2.TabIndex = 10
         '
         'Form6
         '
@@ -141,6 +153,7 @@ Partial Class Form6
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(394, 121)
+        Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
@@ -172,4 +185,5 @@ Partial Class Form6
     Friend WithEvents Label3 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents ComboBox2 As ComboBox
 End Class

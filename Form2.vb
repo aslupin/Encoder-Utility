@@ -7,6 +7,7 @@ Public Class Form2
     Dim drag As Boolean = False
     Dim mousex As Integer, mousey As Integer
     Dim path_sc As String
+    Dim path_cm As String
     Private Sub Form5_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
         drag = False
     End Sub
@@ -22,7 +23,9 @@ Public Class Form2
 
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        path_sc = ".\scripts\"
+        Label13.Hide()
+        Label14.Hide()
+        path_sc = ".\scripts_vdo\"
         My.Settings.check_newScCm = "2"
         For Each file As String In System.IO.Directory.GetFiles(path_sc)
             ComboBox2.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
@@ -34,64 +37,101 @@ Public Class Form2
 
     End Sub
     Public Sub Queue_sc()
-        path_sc = ".\scripts\"
-        Label9.Text = "Queue_scripts >>"
+        path_cm = ".\cmdline_etc\"
+        path_sc = ".\scripts_etc\"
+        ' Label9.Text = "Queue_scripts >>"
         My.Settings.check_newScCm = "2"
     End Sub
     Public Sub Video_sc()
-        path_sc = ".\cmdline_vdo\"
-        Label9.Text = "Video_cmdline >>"
+        path_cm = ".\cmdline_vdo\"
+        path_sc = ".\scripts_vdo\"
+        ' Label9.Text = "Video_cmdline >>"
         My.Settings.check_newScCm = "3"
     End Sub
     Public Sub Audio_sc()
-        path_sc = ".\cmdline_aud\"
-        Label9.Text = "Audio_cmdline >>"
+        path_cm = ".\cmdline_aud\"
+        path_sc = ".\scripts_aud\"
+        '  Label9.Text = "Audio_cmdline >>"
         My.Settings.check_newScCm = "4"
     End Sub
 
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+
+        TextBox1.Text = System.IO.File.ReadAllText(path_sc + ComboBox1.SelectedItem.ToString() + ".txt")
+        My.Settings.ComboSc = ComboBox1.SelectedItem.ToString()
+        My.Settings.Chcom_CmSc = 1
+    End Sub
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
 
 
-        TextBox1.Text = System.IO.File.ReadAllText(path_sc + ComboBox2.SelectedItem.ToString() + ".txt")
-        My.Settings.ComboSc = ComboBox2.SelectedItem.ToString()
-
+        TextBox1.Text = System.IO.File.ReadAllText(path_cm + ComboBox2.SelectedItem.ToString() + ".txt")
+        My.Settings.ComboCm = ComboBox2.SelectedItem.ToString()
+        My.Settings.Chcom_CmSc = 2
     End Sub
     ' Queue 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        Label7.Text = "Video_settings"
+        Label8.Text = "Audio_settings"
+        Label5.Text = "Other_settings    >>"
         TextBox1.Text = ""
         TextBox1.Refresh()
+        ComboBox1.Refresh()
         ComboBox2.Refresh()
         Queue_sc()
 
+        ComboBox1.ResetText()
+        ComboBox1.Items.Clear()
         ComboBox2.ResetText()
         ComboBox2.Items.Clear()
         For Each file As String In System.IO.Directory.GetFiles(path_sc)
+            ComboBox1.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
+
+        Next
+        For Each file As String In System.IO.Directory.GetFiles(path_cm)
             ComboBox2.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
         Next
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+        Label7.Text = "Video_settings    >>"
+        Label8.Text = "Audio_settings"
+        Label5.Text = "Other_settings"
         TextBox1.Text = ""
         TextBox1.Refresh()
+        ComboBox1.Refresh()
         ComboBox2.Refresh()
         Video_sc()
+        ComboBox1.ResetText()
+        ComboBox1.Items.Clear()
         ComboBox2.ResetText()
         ComboBox2.Items.Clear()
         For Each file As String In System.IO.Directory.GetFiles(path_sc)
+            ComboBox1.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
+        Next
+        For Each file As String In System.IO.Directory.GetFiles(path_cm)
             ComboBox2.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
         Next
-
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+        Label7.Text = "Video_settings"
+        Label8.Text = "Audio_settings    >>"
+        Label5.Text = "Other_settings"
         TextBox1.Text = ""
         TextBox1.Refresh()
+        ComboBox1.Refresh()
         ComboBox2.Refresh()
         Audio_sc()
+        ComboBox1.ResetText()
+        ComboBox1.Items.Clear()
         ComboBox2.ResetText()
         ComboBox2.Items.Clear()
 
         For Each file As String In System.IO.Directory.GetFiles(path_sc)
+            ComboBox1.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
+        Next
+        For Each file As String In System.IO.Directory.GetFiles(path_cm)
             ComboBox2.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
         Next
     End Sub
@@ -104,19 +144,36 @@ Public Class Form2
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-        System.IO.File.Delete(path_sc + ComboBox2.SelectedItem.ToString() + ".txt")
+        If My.Settings.Chcom_CmSc = 1 Then
+            System.IO.File.Delete(path_sc + ComboBox1.SelectedItem.ToString() + ".txt")
+        End If
+        If My.Settings.Chcom_CmSc = 2 Then
+            System.IO.File.Delete(path_cm + ComboBox2.SelectedItem.ToString() + ".txt")
+        End If
+
 
         Dim f3 As New Form2
-
         Me.Close()
         f3.Show()
 
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        If ComboBox2.Text <> "" Then
-            File.WriteAllText(path_sc + ComboBox2.SelectedItem.ToString() + ".txt", TextBox1.Text)
+        If My.Settings.Chcom_CmSc = 1 Then
+            If ComboBox1.Text <> "" Then
+                File.WriteAllText(path_sc + ComboBox1.SelectedItem.ToString() + ".txt", TextBox1.Text)
+            End If
         End If
+
+        If My.Settings.Chcom_CmSc = 2 Then
+            If ComboBox2.Text <> "" Then
+                File.WriteAllText(path_cm + ComboBox2.SelectedItem.ToString() + ".txt", TextBox1.Text)
+            End If
+        End If
+
+
+
+
         '  File.WriteAllText(path_sc + ComboBox2.SelectedItem.ToString() + ".txt", TextBox1.Text)
 
     End Sub
@@ -148,6 +205,29 @@ Public Class Form2
             TextBox1.Text += sub_fl(0) + "  >>   " + System.IO.File.ReadAllText(fileName) + vbNewLine
         Next
     End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+        Label13.Show()
+        Label14.Hide()
+        My.Settings.Chcom_CmSc = 1
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+        Label13.Hide()
+        Label14.Show()
+        My.Settings.Chcom_CmSc = 2
+    End Sub
+    Private Sub ComboBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox1.MouseClick
+        Label13.Show()
+        Label14.Hide()
+        My.Settings.Chcom_CmSc = 1
+    End Sub
+    Private Sub ComboBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox2.MouseClick
+        Label13.Hide()
+        Label14.Show()
+        My.Settings.Chcom_CmSc = 2
+    End Sub
+
 
     Private Sub ComboBox2_Click(sender As Object, e As EventArgs) Handles ComboBox2.Click
 
