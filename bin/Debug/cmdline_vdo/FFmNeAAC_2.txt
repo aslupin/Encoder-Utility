@@ -1,3 +1,0 @@
-neroaac
--ignorelength -q 0.75 -lc -if "input_std" -of "out_std"
-.wav .mp4

@@ -18,6 +18,24 @@ Public Class Form5
             Me.Top = Windows.Forms.Cursor.Position.Y - mousey
         End If
     End Sub
+    Private Sub Form5_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+        drag = False
+    End Sub
+    Private Sub Panel1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Panel1.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+
+    Private Sub Panel1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Panel1.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub Panel1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Panel1.MouseUp
+        drag = False
+    End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         path = ".\avss\" + ComboBox1.SelectedItem.ToString() + ".avs"
@@ -90,6 +108,8 @@ Public Class Form5
         System.IO.File.Delete(".\avss\" + ComboBox1.SelectedItem.ToString() + ".avs")
         Dim f3 As New Form5
         ComboBox1.SelectedItem = "none"
+        Form1.ComboBox6.Items.Clear()
+        Form1.ComboBox6.ResetText()
         Me.Close()
         f3.Show()
         Form1.ComboBox6.Refresh()
@@ -110,9 +130,7 @@ Public Class Form5
         Me.Close()
     End Sub
 
-    Private Sub Form5_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
-        drag = False
-    End Sub
+
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
         'Dim ttxxxtt As String

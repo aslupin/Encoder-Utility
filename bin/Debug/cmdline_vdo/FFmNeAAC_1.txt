@@ -1,3 +1,0 @@
-ffmpeg
--i "input_std" -ab 384 "out_std"
-.mp4 .wav

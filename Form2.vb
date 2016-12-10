@@ -17,6 +17,27 @@ Public Class Form2
         mousey = Windows.Forms.Cursor.Position.Y - Me.Top
     End Sub
 
+    Private Sub Form5_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub Panel1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Panel1.MouseUp
+        drag = False
+    End Sub
+    Private Sub Panel1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Panel1.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+
+    Private Sub Panel1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Panel1.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
         Me.Close()
     End Sub
@@ -25,33 +46,60 @@ Public Class Form2
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label13.Hide()
         Label14.Hide()
-        path_sc = ".\scripts_vdo\"
-        My.Settings.check_newScCm = "2"
+
+        If My.Settings.opened = 1 Then
+            Video_sc()
+        End If
+        If My.Settings.opened = 2 Then
+            Audio_sc()
+        End If
+        If My.Settings.opened = 3 Then
+            Queue_sc()
+        End If
+
+
+
+        ' My.Settings.check_newScCm = "2"
         For Each file As String In System.IO.Directory.GetFiles(path_sc)
+            ComboBox1.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
+        Next
+        For Each file As String In System.IO.Directory.GetFiles(path_cm)
             ComboBox2.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
         Next
-
-        ComboBox2.SelectedItem = My.Settings.ComboSc
+        ComboBox2.SelectedItem = My.Settings.ComboCm
+        ComboBox1.SelectedItem = My.Settings.ComboSc
         TextBox1.Text = System.IO.File.ReadAllText(path_sc + ComboBox2.SelectedItem.ToString() + ".txt")
 
 
     End Sub
     Public Sub Queue_sc()
+        Label7.Text = "Video_settings"
+        Label8.Text = "Audio_settings"
+        Label5.Text = "Other_settings    >>"
         path_cm = ".\cmdline_etc\"
         path_sc = ".\scripts_etc\"
         ' Label9.Text = "Queue_scripts >>"
+        My.Settings.opened = 3
         My.Settings.check_newScCm = "2"
     End Sub
     Public Sub Video_sc()
+        Label7.Text = "Video_settings    >>"
+        Label8.Text = "Audio_settings"
+        Label5.Text = "Other_settings"
         path_cm = ".\cmdline_vdo\"
         path_sc = ".\scripts_vdo\"
         ' Label9.Text = "Video_cmdline >>"
+        My.Settings.opened = 1
         My.Settings.check_newScCm = "3"
     End Sub
     Public Sub Audio_sc()
+        Label7.Text = "Video_settings"
+        Label8.Text = "Audio_settings    >>"
+        Label5.Text = "Other_settings"
         path_cm = ".\cmdline_aud\"
         path_sc = ".\scripts_aud\"
         '  Label9.Text = "Audio_cmdline >>"
+        My.Settings.opened = 2
         My.Settings.check_newScCm = "4"
     End Sub
 
@@ -71,9 +119,7 @@ Public Class Form2
     End Sub
     ' Queue 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-        Label7.Text = "Video_settings"
-        Label8.Text = "Audio_settings"
-        Label5.Text = "Other_settings    >>"
+
         TextBox1.Text = ""
         TextBox1.Refresh()
         ComboBox1.Refresh()
@@ -94,9 +140,7 @@ Public Class Form2
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-        Label7.Text = "Video_settings    >>"
-        Label8.Text = "Audio_settings"
-        Label5.Text = "Other_settings"
+
         TextBox1.Text = ""
         TextBox1.Refresh()
         ComboBox1.Refresh()
@@ -115,9 +159,7 @@ Public Class Form2
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-        Label7.Text = "Video_settings"
-        Label8.Text = "Audio_settings    >>"
-        Label5.Text = "Other_settings"
+
         TextBox1.Text = ""
         TextBox1.Refresh()
         ComboBox1.Refresh()
@@ -136,12 +178,6 @@ Public Class Form2
         Next
     End Sub
 
-    Private Sub Form5_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
-        If drag Then
-            Me.Left = Windows.Forms.Cursor.Position.X - mousex
-            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
-        End If
-    End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
         If My.Settings.Chcom_CmSc = 1 Then
@@ -218,11 +254,23 @@ Public Class Form2
         My.Settings.Chcom_CmSc = 2
     End Sub
     Private Sub ComboBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox1.MouseClick
+        If ComboBox1.SelectedItem <> vbNullString Then
+            TextBox1.Text = System.IO.File.ReadAllText(path_sc + ComboBox1.SelectedItem.ToString() + ".txt")
+            My.Settings.ComboSc = ComboBox1.SelectedItem.ToString()
+
+        End If
+
         Label13.Show()
         Label14.Hide()
         My.Settings.Chcom_CmSc = 1
     End Sub
     Private Sub ComboBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox2.MouseClick
+        If ComboBox2.SelectedItem <> vbNullString Then
+            TextBox1.Text = System.IO.File.ReadAllText(path_cm + ComboBox2.SelectedItem.ToString() + ".txt")
+            My.Settings.ComboSc = ComboBox2.SelectedItem.ToString()
+
+        End If
+
         Label13.Hide()
         Label14.Show()
         My.Settings.Chcom_CmSc = 2

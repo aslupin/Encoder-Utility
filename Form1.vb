@@ -6,7 +6,7 @@ Imports System.Threading
 
 Public Class Form1
 
-    '
+    Dim PathFileAAS_TWO As String
     Dim FCount As Integer       '
 
 
@@ -64,44 +64,143 @@ Public Class Form1
     Dim pass As Long
     Dim p1 As Long
     Dim Encmode As String
-
-
-
-
-
-    Dim Fcan As Long
-    Dim xerNum As Integer
-    'Dim TextLabel16 As String
-
-
-
-    '-------------------
-    '-------------------
-    '-------------------
-    'AVS SET
-    '-------------------  
-    '-------------------
-    '-------------------
-    '-------------------
-
-
-    'Check used Pic
-
-
-
+    Private Sub PictureBox4_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox4.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub PictureBox4_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox4.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub PictureBox4_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox4.MouseUp
+        drag = False
+    End Sub
+    Private Sub PictureBox3_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox3.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub PictureBox3_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox3.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub PictureBox3_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox3.MouseUp
+        drag = False
+    End Sub
+    Private Sub PictureBox2_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub PictureBox2_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub PictureBox2_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseUp
+        drag = False
+    End Sub
+    Private Sub PictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub PictureBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseUp
+        drag = False
+    End Sub
+    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub Panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp
+        drag = False
+    End Sub
+    Private Sub TabPage4_MouseDown(sender As Object, e As MouseEventArgs) Handles TabPage4.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub TabPage4_MouseMove(sender As Object, e As MouseEventArgs) Handles TabPage4.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub TabPage4_MouseUp(sender As Object, e As MouseEventArgs) Handles TabPage4.MouseUp
+        drag = False
+    End Sub
+    Private Sub TabPage3_MouseDown(sender As Object, e As MouseEventArgs) Handles TabPage3.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub TabPage3_MouseMove(sender As Object, e As MouseEventArgs) Handles TabPage3.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub TabPage3_MouseUp(sender As Object, e As MouseEventArgs) Handles TabPage3.MouseUp
+        drag = False
+    End Sub
+    Private Sub TabPage2_MouseDown(sender As Object, e As MouseEventArgs) Handles TabPage2.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub TabPage2_MouseMove(sender As Object, e As MouseEventArgs) Handles TabPage2.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub TabPage2_MouseUp(sender As Object, e As MouseEventArgs) Handles TabPage2.MouseUp
+        drag = False
+    End Sub
+    Private Sub TabPage1_MouseDown(sender As Object, e As MouseEventArgs) Handles TabPage1.MouseDown
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+    Private Sub TabPage1_MouseMove(sender As Object, e As MouseEventArgs) Handles TabPage1.MouseMove
+        If drag Then
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
+        End If
+    End Sub
+    Private Sub TabPage1_MouseUp(sender As Object, e As MouseEventArgs) Handles TabPage1.MouseUp
+        drag = False
+    End Sub
     Private Sub Form1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
         drag = True
         mousex = Windows.Forms.Cursor.Position.X - Me.Left
         mousey = Windows.Forms.Cursor.Position.Y - Me.Top
     End Sub
-
     Private Sub Form1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
         If drag Then
             Me.Left = Windows.Forms.Cursor.Position.X - mousex
             Me.Top = Windows.Forms.Cursor.Position.Y - mousey
         End If
     End Sub
-
     Private Sub Form1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
         drag = False
     End Sub
@@ -177,7 +276,7 @@ Public Class Form1
     'Save as
     'Button 4
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Dim PathFileAAS_TWO As String = ".\avss\" + My.Settings.ComboAvs + ".avs"
+        PathFileAAS_TWO = ".\avss\" + My.Settings.ComboAvs + ".avs"
         TTextBox3 = System.IO.File.ReadAllText(PathFileAAS_TWO)
         TTextBox3 = TTextBox3.Replace("<input:Textsub>", TextBox2_5)
         TTextBox3 = TTextBox3.Replace("<input:InRaw>", TextBox1.Text)
@@ -213,11 +312,35 @@ Public Class Form1
     '-----------------FC Aotomatic-------------
     '
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim dir4 = ".\scripts_etc"
+        For Each file As String In System.IO.Directory.GetFiles(dir4)
+            ComboBox3.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
+        Next
+        Dim dir3 = ".\scripts_aud"
+        For Each file As String In System.IO.Directory.GetFiles(dir3)
+            ComboBox2.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
+        Next
+        Dim dir2 = ".\scripts_vdo"
+        For Each file As String In System.IO.Directory.GetFiles(dir2)
+            ComboBox1.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
+        Next
+        Dim dir = ".\avss"
+        For Each file As String In System.IO.Directory.GetFiles(dir)
+            ComboBox6.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
+        Next
+        ComboBox3.SelectedItem = My.Settings.Enc3
+        ComboBox2.SelectedItem = My.Settings.Enc2
+        ComboBox1.SelectedItem = My.Settings.Enc
+        ComboBox6.SelectedItem = My.Settings.ComboAvs
+        Panel4.Size = New Size(0, 0)
         Panel3.Size = New Size(0, 0)
         Panel2.Size = New Size(0, 0)
         RichTextBox1.Text = "Status : - "
         RichTextBox1.BackColor = System.Drawing.SystemColors.ControlLight
-
+        RichTextBox2.Text = "Status : - "
+        RichTextBox2.BackColor = System.Drawing.SystemColors.ControlLight
+        RichTextBox3.Text = "Status : - "
+        RichTextBox3.BackColor = System.Drawing.SystemColors.ControlLight
         Dim oForm As Form3
         oForm = New Form3()
         oForm.Show()
@@ -261,7 +384,6 @@ Public Class Form1
         'Label11.Text = "0%"            'ignore this line
         '  ProgressBar1.Value = 0          'set the progressbar to 0
         ' Button5.Enabled = False      'cancel button
-        '
 
 
 
@@ -271,34 +393,7 @@ Public Class Form1
  Handles MyBase.FormClosing
         My.Settings.FileLog = Logfile
     End Sub
-    Private Sub EncodePluginToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim URL As String = "http://www.zixmarplus.com/Encode%20Plugin.rar"
-        DownloadFile(URL)
-    End Sub
-    Sub DownloadFile(ByVal URL As String)
-        Dim SFD As New SaveFileDialog
-        SFD.Filter = "All Files|*.*"
-        SFD.FileName = "Encode Plugin.rar"
-        If SFD.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Using w As New Net.WebClient
-                w.DownloadFile(URL, SFD.FileName)
-            End Using
-        End If
-    End Sub
-    Private Sub ASEncodeVToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim URL As String = "http://www.zixmarplus.com/AS%20Encode.rar"
-        DownloadFile2(URL)
-    End Sub
-    Sub DownloadFile2(ByVal URL As String)
-        Dim SFD As New SaveFileDialog
-        SFD.Filter = "All Files|*.*"
-        SFD.FileName = "AS Encode.rar"
-        If SFD.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Using w As New Net.WebClient
-                w.DownloadFile(URL, SFD.FileName)
-            End Using
-        End If
-    End Sub
+
     Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click
 
 
@@ -351,21 +446,15 @@ Public Class Form1
 
     End Sub
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+        RichTextBox1.Text = "Status : Loading.."
         text_queue = System.IO.File.ReadAllText(".\scripts_vdo\" + ComboBox1.SelectedItem.ToString() + ".txt")
 
         Bgw1.RunWorkerAsync()
-        'Dim T1 As New Thread(AddressOf Enprocess_2) 'Enprocess
-        ' T1.Start()
-
-
-
-
-
 
     End Sub
     Private Sub Enprocess_2()
 
-        RichTextBox1.Text = "Status : loading.."
+
         Control.CheckForIllegalCrossThreadCalls = False
         Dim strArr_queue(12) As String
         text_queue = text_queue.Replace("MODE ", "")
@@ -432,7 +521,7 @@ Public Class Form1
             Else
                 S1pass(nofen + 1) = S1pass(nofen)
             End If
-            MsgBox(goto_arg)
+            ' MsgBox(goto_arg)
             oStartInfoQ.FileName = path_process(nofen)
             oStartInfoQ.Arguments = goto_arg
             oStartInfoQ.UseShellExecute = False
@@ -468,13 +557,228 @@ Public Class Form1
 
 
     End Sub
+    Private Sub Enprocess_3()
+
+        Control.CheckForIllegalCrossThreadCalls = False
+        Dim strArr_queue(12) As String
+        text_queue = text_queue.Replace("MODE ", "")
+
+        Dim parts As String() = text_queue.Split(New String() {Environment.NewLine},
+                                       StringSplitOptions.None)
+        nOfQueue = Integer.Parse(Regex.Replace(parts(0), "[^\d]", ""))
+        'MsgBox(nOfQueue)
+        Dim OutType(nOfQueue + 1) As String
+        Dim path_process(nOfQueue + 1) As String
+        Dim arguments_process(nOfQueue + 1) As String
+
+        For value As Integer = 1 To nOfQueue
+            strArr_queue(value) = System.IO.File.ReadAllText(".\cmdline_aud\" + parts(value) + ".txt")
+            Dim temp_strarr As String() = strArr_queue(value).Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+            ' MsgBox(temp_strarr(0) + vbNewLine + temp_strarr(1))
+
+            path_process(value) = System.IO.File.ReadAllText(".\path_tools\" + temp_strarr(0) + ".txt")
+            arguments_process(value) = temp_strarr(1)
+            OutType(value) = temp_strarr(2)
+
+        Next
+
+
+
+        Panel3.Size = New Size(872, 31)
+        RichTextBox2.BackColor = Color.DimGray
+        RichTextBox2.ForeColor = Color.WhiteSmoke
+        Dim goto_arg As String
+        Dim nofen As Integer
+        Dim N1pass(20) As String
+        Dim S1pass(20) As String
+        S1pass(1) = TextBox7.Text
+        N1pass(1) = TextBox8.Text
+
+        For nofen = 1 To nOfQueue
+
+            If nOfQueue = 1 Then
+
+            End If
+            Dim std_typeEn As String() = OutType(nofen).Split(" ")
+            If std_typeEn(0) <> "NULL" Then
+                If nofen = 1 Then
+                    N1pass(nofen) = N1pass(nofen).Replace(std_typeEn(0), std_typeEn(1))
+                Else
+                    N1pass(nofen) = N1pass(nofen - 1).Replace(std_typeEn(0), std_typeEn(1))
+                End If
+
+
+
+            End If
+
+
+            '  goto_arg = arguments_process(nofen).Replace("out_std", TextBox6.Text).Replace("input_std", TextBox3.Text)
+            If nofen = nOfQueue Then
+                goto_arg = arguments_process(nofen).Replace("input_std", S1pass(nofen)).Replace("out_std", N1pass(nofen))
+            Else
+                goto_arg = arguments_process(nofen).Replace("input_std", S1pass(nofen)).Replace("out_std", N1pass(nofen))
+            End If
+
+            If std_typeEn(0) <> "NULL" Then
+                S1pass(nofen + 1) = N1pass(nofen)
+
+            Else
+                S1pass(nofen + 1) = S1pass(nofen)
+            End If
+            ' MsgBox(goto_arg)
+            oStartInfoQ.FileName = path_process(nofen)
+            oStartInfoQ.Arguments = goto_arg
+            oStartInfoQ.UseShellExecute = False
+            oStartInfoQ.WindowStyle = ProcessWindowStyle.Hidden
+            oStartInfoQ.RedirectStandardError = True
+            oStartInfoQ.RedirectStandardOutput = True
+            oStartInfoQ.CreateNoWindow = True
+            oProcess_Q.StartInfo = oStartInfoQ
+            oProcess_Q.Start() 'Start Process
+
+            'ffmpeg uses StandardErrorOut instead of StandardOut
+            ffReader = oProcess_Q.StandardError 'Enable Error Checking For FFMPEG.EXE
+
+            Do
+                If Bgw1.CancellationPending Then ' Have we pressed Cancel?
+                    Exit Sub
+                End If
+
+                strFFOUT = ffReader.ReadLine         'read each line from ffreader
+                RichTextBox2.Text = "Status : " + parts(nofen) + "  " + strFFOUT
+            Loop Until oProcess_Q.HasExited And strFFOUT = Nothing Or strFFOUT = ""
+
+        Next
+
+        For nofen = 1 To nOfQueue - 1
+            System.IO.File.Delete(N1pass(nofen))
+        Next
+        ' System.IO.File.Delete(N1pass)
+        RichTextBox2.Text = "Status : Completed."
+        Panel3.Size = New Size(872, 31)
+        ' RichTextBox1.BackColor = Me.BackColor
+        ' RichTextBox1.ForeColor = Color.Black
+
+    End Sub
+    Private Sub Enprocess_4()
+
+        Control.CheckForIllegalCrossThreadCalls = False
+        Dim strArr_queue(12) As String
+        text_queue = text_queue.Replace("MODE ", "")
+
+        Dim parts As String() = text_queue.Split(New String() {Environment.NewLine},
+                                       StringSplitOptions.None)
+        nOfQueue = Integer.Parse(Regex.Replace(parts(0), "[^\d]", ""))
+        'MsgBox(nOfQueue)
+        Dim OutType(nOfQueue + 1) As String
+        Dim path_process(nOfQueue + 1) As String
+        Dim arguments_process(nOfQueue + 1) As String
+
+        For value As Integer = 1 To nOfQueue
+            strArr_queue(value) = System.IO.File.ReadAllText(".\cmdline_etc\" + parts(value) + ".txt")
+            Dim temp_strarr As String() = strArr_queue(value).Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+            ' MsgBox(temp_strarr(0) + vbNewLine + temp_strarr(1))
+
+            path_process(value) = System.IO.File.ReadAllText(".\path_tools\" + temp_strarr(0) + ".txt")
+            arguments_process(value) = temp_strarr(1)
+            OutType(value) = temp_strarr(2)
+
+        Next
+
+
+
+        Panel4.Size = New Size(872, 31)
+        RichTextBox3.BackColor = Color.DimGray
+        RichTextBox3.ForeColor = Color.WhiteSmoke
+        Dim goto_arg As String
+        Dim nofen As Integer
+        Dim N1pass(20) As String
+        Dim S1pass(20) As String
+        Dim S2pass(20) As String
+        S1pass(1) = TextBox9.Text 'VDO
+        S2pass(1) = TextBox10.Text 'AUD
+        N1pass(1) = TextBox11.Text 'OUT
+
+
+        For nofen = 1 To nOfQueue
+
+            If nOfQueue = 1 Then
+
+            End If
+            Dim std_typeEn As String() = OutType(nofen).Split(" ")
+            If std_typeEn(0) <> "NULL" Then
+                If nofen = 1 Then
+                    N1pass(nofen) = N1pass(nofen).Replace(std_typeEn(0), std_typeEn(1))
+                Else
+                    N1pass(nofen) = N1pass(nofen - 1).Replace(std_typeEn(0), std_typeEn(1))
+                End If
+
+
+
+            End If
+
+
+            '  goto_arg = arguments_process(nofen).Replace("out_std", TextBox6.Text).Replace("input_std", TextBox3.Text)
+
+            goto_arg = arguments_process(nofen).Replace("input_vdo", S1pass(nofen)).Replace("input_aud", S2pass(nofen)).Replace("out_std", N1pass(nofen))
+
+
+            If std_typeEn(0) <> "NULL" Then
+                S1pass(nofen + 1) = N1pass(nofen)
+
+            Else
+                S1pass(nofen + 1) = S1pass(nofen)
+            End If
+            ' MsgBox(goto_arg)
+            oStartInfoQ.FileName = path_process(nofen)
+            oStartInfoQ.Arguments = goto_arg
+            oStartInfoQ.UseShellExecute = False
+            oStartInfoQ.WindowStyle = ProcessWindowStyle.Hidden
+            oStartInfoQ.RedirectStandardError = True
+            oStartInfoQ.RedirectStandardOutput = True
+            oStartInfoQ.CreateNoWindow = True
+            oProcess_Q.StartInfo = oStartInfoQ
+            oProcess_Q.Start() 'Start Process
+
+            'ffmpeg uses StandardErrorOut instead of StandardOut
+            ffReader = oProcess_Q.StandardError 'Enable Error Checking For FFMPEG.EXE
+
+            Do
+                If Bgw1.CancellationPending Then ' Have we pressed Cancel?
+                    Exit Sub
+                End If
+
+                strFFOUT = ffReader.ReadLine         'read each line from ffreader
+                RichTextBox3.Text = "Status : " + parts(nofen) + "  " + strFFOUT
+            Loop Until oProcess_Q.HasExited And strFFOUT = Nothing Or strFFOUT = ""
+
+        Next
+
+        ' For nofen = 1 To nOfQueue - 1
+        'System.IO.File.Delete(N1pass(nofen))
+        '  Next
+        ' System.IO.File.Delete(N1pass)
+        RichTextBox3.Text = "Status : Completed."
+        Panel4.Size = New Size(872, 31)
+        ' RichTextBox1.BackColor = Me.BackColor
+        ' RichTextBox1.ForeColor = Color.Black
+
+    End Sub
     Private Sub Enprocess1()
 
     End Sub
 
     Private Sub Bgw1_DoWork(ByVal sender As System.Object,
     ByVal e As System.ComponentModel.DoWorkEventArgs) Handles Bgw1.DoWork
-        Enprocess_2()   'run the function to convert
+        Enprocess_2()
+    End Sub
+    Private Sub Bgw2_DoWork(ByVal sender As System.Object,
+    ByVal e As System.ComponentModel.DoWorkEventArgs) Handles Bgw2.DoWork
+        Enprocess_3()
+    End Sub
+    Private Sub Bgw3_DoWork(ByVal sender As System.Object,
+    ByVal e As System.ComponentModel.DoWorkEventArgs) Handles Bgw3.DoWork
+        Enprocess_4()
     End Sub
 
     Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
@@ -564,80 +868,12 @@ Public Class Form1
         TextBox8.Text = TextBox8.Text.Replace(".mkv", "_audio.mp4")
         oplog = TextBox8.Text
         '  oplog = oplog.Replace("\", "/")
-        oplog = oplog.Replace(".mp4", ".wav")
+        'oplog = oplog.Replace(".mp4", ".wav")
     End Sub
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
-
-
-        ' If Delay Mod 2 = 0 Then
-
-        Dim oProcess As New Process()
-        Dim oStartInfo As New ProcessStartInfo()
-        oStartInfo.FileName = ".\tools\ffmpeg\ffmpeg.exe"
-        '  oStartInfo.Arguments = "-i """ + iplog & """ -ab " + abb & " """ + oplog & """"
-        '-i "iplog" -ab abb "oplog"
-        oStartInfo.UseShellExecute = False
-        oStartInfo.CreateNoWindow = False
-        oStartInfo.RedirectStandardOutput = True
-        ' Status2.Text = "[Status] : --FFMPEG | Encoding audio..."
-        oProcess.StartInfo = oStartInfo
-        oProcess.Start()
-        oProcess.WaitForExit()
-
-        oStartInfo.FileName = ".\tools\neroaac\neroAacEnc.exe"
-        '    oStartInfo.Arguments = "-ignorelength " + Q1Nero & " " + BitNero & " " + useAf & " -if """ + oplog & """ -of """ + TextBox8.Text & """"
-        '-ignorelength Q1Nero BitNero useAf -if "oplog" -of "TextBox8.Text"
-        oStartInfo.UseShellExecute = False
-        oStartInfo.CreateNoWindow = False
-        oStartInfo.RedirectStandardOutput = True
-        '  Status2.Text = "[Status] : --NeroAacEnc | Encoding audio..."
-        oProcess.StartInfo = oStartInfo
-        oProcess.Start()
-        oProcess.WaitForExit()
-
-        System.IO.File.Delete(oplog)
-        'Status2.Text = "[Status] : Encoded."
-
-        '  End If
-
-
-        ' If Delay Mod 2 = 1 Then
-        'Dim oProcess As New Process()
-        'Dim oStartInfo As New ProcessStartInfo()
-        oStartInfo.FileName = ".\tools\mp4box\mp4box.exe"
-        ' oStartInfo.Arguments = "-delay 2=" + Dlay & " -add """ + iplog & """ """ + ArDlay & """"
-        oStartInfo.UseShellExecute = False
-        oStartInfo.CreateNoWindow = False
-        oStartInfo.RedirectStandardOutput = True
-        ' Status2.Text = "[Status] : --MP4BOX | Encoding audio..."
-        oProcess.StartInfo = oStartInfo
-        oProcess.Start()
-        oProcess.WaitForExit()
-
-
-        oStartInfo.FileName = ".\tools\ffmpeg\ffmpeg.exe"
-        ' oStartInfo.Arguments = "-i """ + ArDlay & """ -ab " + abb & " """ + oplog & """"
-        oStartInfo.UseShellExecute = False
-        oStartInfo.CreateNoWindow = False
-        oStartInfo.RedirectStandardOutput = True
-        ' Status2.Text = "[Status] : --FFMPEG | Encoding audio..."
-        oProcess.StartInfo = oStartInfo
-        oProcess.Start()
-        oProcess.WaitForExit()
-
-        oStartInfo.FileName = ".\tools\neroaac\neroAacEnc.exe"
-        '  oStartInfo.Arguments = "-ignorelength " + Q1Nero & " " + BitNero & " " + useAf & " -if """ + oplog & """ -of """ + TextBox8.Text & """"
-        oStartInfo.UseShellExecute = False
-        oStartInfo.CreateNoWindow = False
-        oStartInfo.RedirectStandardOutput = True
-        '  Status2.Text = "[Status] : --NeroAacEnc | Encoding audio..."
-        oProcess.StartInfo = oStartInfo
-        oProcess.Start()
-        oProcess.WaitForExit()
-
-        System.IO.File.Delete(oplog)
-        '   Status2.Text = "[Status] : Encoded."
-        ' End If
+        RichTextBox2.Text = "Status : Loading.."
+        text_queue = System.IO.File.ReadAllText(".\scripts_aud\" + ComboBox2.SelectedItem.ToString() + ".txt")
+        Bgw2.RunWorkerAsync()
 
 
     End Sub
@@ -691,7 +927,8 @@ Public Class Form1
     End Sub
     Private Sub Button20_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button20.Click
         Dim saveFileDialog2 As New SaveFileDialog()
-        saveFileDialog2.Filter = "MP4 files (*.mp4)|*.mp4"
+        saveFileDialog2.Filter = "MP4 files (*.mp4)|*.mp4" &
+            "|MKV Files (*.mkv)|*.mkv"
         saveFileDialog2.FilterIndex = 2
         saveFileDialog2.RestoreDirectory = True
         If saveFileDialog2.ShowDialog() = DialogResult.OK Then
@@ -701,32 +938,26 @@ Public Class Form1
         Moplog = Moplog.Replace("\", "/")
     End Sub
     Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
-        Dim oProcess As New Process()
-        Dim oStartInfo As New ProcessStartInfo()
-
-
-        oStartInfo.FileName = ".\tools\mp4box\mp4box.exe"
-        oStartInfo.Arguments = "-add """ + Miplog & """ -add """ + M2iplog & """ """ + TextBox11.Text & """"
-        oStartInfo.UseShellExecute = False
-        oStartInfo.CreateNoWindow = False
-
-        oStartInfo.RedirectStandardOutput = True
-        Status3.Text = "[Status] : Mux..."
-        oProcess.StartInfo = oStartInfo
-        oProcess.Start()
-        oProcess.WaitForExit()
-        Status3.Text = "[Status] : Muxed."
+        RichTextBox3.Text = "Status : Loading.."
+        text_queue = System.IO.File.ReadAllText(".\scripts_etc\" + ComboBox3.SelectedItem.ToString() + ".txt")
+        Bgw3.RunWorkerAsync()
     End Sub
 
-    Private Sub Button19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button19.Click
+    Private Sub Button19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MsgBox("-add """ + Miplog & """ -add """ + M2iplog & """ """ + TextBox11.Text & """")
     End Sub
+    Private Sub ComboBox3_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox3.SelectedIndexChanged
 
+        My.Settings.Enc3 = ComboBox3.SelectedItem.ToString()
+    End Sub
 
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+        My.Settings.Enc2 = ComboBox2.SelectedItem.ToString()
+    End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
 
-        My.Settings.Enc = Encmode
+        My.Settings.Enc = ComboBox1.SelectedItem.ToString()
     End Sub
 
 
@@ -743,7 +974,6 @@ Public Class Form1
 
 
     Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox6.SelectedIndexChanged
-
         My.Settings.ComboAvs = ComboBox6.SelectedItem.ToString()
     End Sub
 
@@ -785,9 +1015,24 @@ Public Class Form1
         oForm = Nothing
     End Sub
 
-    Private Sub ComboBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox2.MouseClick
+
+    Private Sub ComboBox3_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox3.MouseClick
+        ComboBox3.Items.Clear()
+        Dim dir = ".\scripts_etc"
+        For Each file As String In System.IO.Directory.GetFiles(dir)
+            ComboBox3.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
+        Next
 
     End Sub
+    Private Sub ComboBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox2.MouseClick
+        ComboBox2.Items.Clear()
+        Dim dir = ".\scripts_aud"
+        For Each file As String In System.IO.Directory.GetFiles(dir)
+            ComboBox2.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
+        Next
+
+    End Sub
+
     Private Sub ComboBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox1.MouseClick
         ComboBox1.Items.Clear()
         Dim dir = ".\scripts_vdo"
@@ -796,6 +1041,9 @@ Public Class Form1
         Next
 
     End Sub
+
+
+
 End Class
 
 

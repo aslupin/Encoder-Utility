@@ -1,3 +1,3 @@
 neroaac
 -ignorelength -q 0.75 -lc -if "input_std" -of "out_std"
-.mp4 .mp4
+.wav .mp4

@@ -305,6 +305,42 @@ Namespace My
                 Me("Chcom_CmSc") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property opened() As String
+            Get
+                Return CType(Me("opened"),String)
+            End Get
+            Set
+                Me("opened") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Enc2() As String
+            Get
+                Return CType(Me("Enc2"),String)
+            End Get
+            Set
+                Me("Enc2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Enc3() As String
+            Get
+                Return CType(Me("Enc3"),String)
+            End Get
+            Set
+                Me("Enc3") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
