@@ -41,6 +41,7 @@ Partial Class Form1
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -54,6 +55,7 @@ Partial Class Form1
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -67,6 +69,7 @@ Partial Class Form1
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
@@ -100,10 +103,13 @@ Partial Class Form1
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -302,17 +308,28 @@ Partial Class Form1
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.RichTextBox1.Size = New System.Drawing.Size(814, 23)
+        Me.RichTextBox1.Size = New System.Drawing.Size(771, 23)
         Me.RichTextBox1.TabIndex = 9
         Me.RichTextBox1.Text = ""
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.DimGray
+        Me.Panel2.Controls.Add(Me.Label22)
         Me.Panel2.Location = New System.Drawing.Point(-4, 205)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(872, 31)
         Me.Panel2.TabIndex = 49
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label22.Location = New System.Drawing.Point(814, 9)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(40, 13)
+        Me.Label22.TabIndex = 0
+        Me.Label22.Text = "Cancel"
         '
         'PictureBox2
         '
@@ -453,17 +470,28 @@ Partial Class Form1
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.ReadOnly = True
         Me.RichTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.RichTextBox2.Size = New System.Drawing.Size(814, 23)
+        Me.RichTextBox2.Size = New System.Drawing.Size(776, 23)
         Me.RichTextBox2.TabIndex = 50
         Me.RichTextBox2.Text = ""
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.DimGray
+        Me.Panel3.Controls.Add(Me.Label23)
         Me.Panel3.Location = New System.Drawing.Point(-4, 206)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(872, 31)
         Me.Panel3.TabIndex = 52
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label23.Location = New System.Drawing.Point(816, 8)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(40, 13)
+        Me.Label23.TabIndex = 53
+        Me.Label23.Text = "Cancel"
         '
         'PictureBox3
         '
@@ -606,17 +634,28 @@ Partial Class Form1
         Me.RichTextBox3.Name = "RichTextBox3"
         Me.RichTextBox3.ReadOnly = True
         Me.RichTextBox3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.RichTextBox3.Size = New System.Drawing.Size(814, 23)
+        Me.RichTextBox3.Size = New System.Drawing.Size(781, 23)
         Me.RichTextBox3.TabIndex = 55
         Me.RichTextBox3.Text = ""
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.DimGray
+        Me.Panel4.Controls.Add(Me.Label24)
         Me.Panel4.Location = New System.Drawing.Point(-2, 207)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(872, 31)
         Me.Panel4.TabIndex = 57
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label24.Location = New System.Drawing.Point(814, 8)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(40, 13)
+        Me.Label24.TabIndex = 58
+        Me.Label24.Text = "Cancel"
         '
         'PictureBox4
         '
@@ -900,6 +939,9 @@ Partial Class Form1
         'Bgw2
         '
         '
+        'Bgw3
+        '
+        '
         'Form1
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -921,12 +963,18 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -1006,4 +1054,7 @@ Partial Class Form1
     Friend WithEvents Label20 As Label
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Bgw3 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
 End Class

@@ -5,7 +5,7 @@ Imports System.Threading
 
 
 Public Class Form1
-
+    Dim checkrunn As String = 0
     Dim PathFileAAS_TWO As String
     Dim FCount As Integer       '
 
@@ -345,11 +345,16 @@ Public Class Form1
         oForm = New Form3()
         oForm.Show()
         oForm = Nothing
-
+        checkrunn = 0
         TabControl1.Hide()
         Panel1.Hide()
         Label29.Hide()
         Label9.Hide()
+
+        Label22.Hide()
+        Label23.Hide()
+        Label24.Hide()
+
         Me.WindowState = FormWindowState.Minimized
         Me.Enabled = False
         Me.Opacity = 0
@@ -446,7 +451,9 @@ Public Class Form1
 
     End Sub
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+        checkrunn = 1
         RichTextBox1.Text = "Status : Loading.."
+        Label22.Show()
         text_queue = System.IO.File.ReadAllText(".\scripts_vdo\" + ComboBox1.SelectedItem.ToString() + ".txt")
 
         Bgw1.RunWorkerAsync()
@@ -554,7 +561,7 @@ Public Class Form1
         Panel2.Size = New Size(872, 31)
         ' RichTextBox1.BackColor = Me.BackColor
         ' RichTextBox1.ForeColor = Color.Black
-
+        checkrunn = 0
 
     End Sub
     Private Sub Enprocess_3()
@@ -656,6 +663,7 @@ Public Class Form1
         ' System.IO.File.Delete(N1pass)
         RichTextBox2.Text = "Status : Completed."
         Panel3.Size = New Size(872, 31)
+        checkrunn = 0
         ' RichTextBox1.BackColor = Me.BackColor
         ' RichTextBox1.ForeColor = Color.Black
 
@@ -762,7 +770,7 @@ Public Class Form1
         Panel4.Size = New Size(872, 31)
         ' RichTextBox1.BackColor = Me.BackColor
         ' RichTextBox1.ForeColor = Color.Black
-
+        checkrunn = 0
     End Sub
     Private Sub Enprocess1()
 
@@ -800,8 +808,24 @@ Public Class Form1
         TextBox6.Text = myFileDlog1.FileName
         TextBox6.Text = TextBox6.Text.Replace(".avs", "_addsub.mp4")
     End Sub
+
+
     Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
-        Me.Close()
+        If checkrunn = 1 Then
+
+
+        End If
+        If checkrunn = 0 Then
+            Me.Close()
+        End If
+
+        ' Me.Close()
+
+
+        ' oProcess_Q.Kill()
+
+
+
     End Sub
     Private Sub Label6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label6.Click
 
@@ -871,6 +895,7 @@ Public Class Form1
         'oplog = oplog.Replace(".mp4", ".wav")
     End Sub
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
+        checkrunn = 1
         RichTextBox2.Text = "Status : Loading.."
         text_queue = System.IO.File.ReadAllText(".\scripts_aud\" + ComboBox2.SelectedItem.ToString() + ".txt")
         Bgw2.RunWorkerAsync()
@@ -938,6 +963,7 @@ Public Class Form1
         Moplog = Moplog.Replace("\", "/")
     End Sub
     Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
+        checkrunn = 1
         RichTextBox3.Text = "Status : Loading.."
         text_queue = System.IO.File.ReadAllText(".\scripts_etc\" + ComboBox3.SelectedItem.ToString() + ".txt")
         Bgw3.RunWorkerAsync()
@@ -1031,6 +1057,16 @@ Public Class Form1
             ComboBox2.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file))
         Next
 
+    End Sub
+
+    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
+        oProcess_Q.Kill()
+    End Sub
+    Private Sub Label23_Click(sender As Object, e As EventArgs) Handles Label23.Click
+        oProcess_Q.Kill()
+    End Sub
+    Private Sub Label24_Click(sender As Object, e As EventArgs) Handles Label24.Click
+        oProcess_Q.Kill()
     End Sub
 
     Private Sub ComboBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox1.MouseClick

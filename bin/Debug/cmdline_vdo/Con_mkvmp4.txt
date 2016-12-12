@@ -1,0 +1,3 @@
+ffmpeg
+-i "input_std" -codec copy "out_std"
+.mkv .mp4

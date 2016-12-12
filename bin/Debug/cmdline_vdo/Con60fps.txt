@@ -1,0 +1,3 @@
+x264
+--qp 17 --output "out_std" "input_std"
+.avs .mkv

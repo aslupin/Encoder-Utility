@@ -1,3 +1,0 @@
-ffmpeg
--i "input_std" -vcodec copy -vsync drop -r 60 "out_std"
-NULL
