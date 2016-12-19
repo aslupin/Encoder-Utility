@@ -1,0 +1,3 @@
+ffmpeg
+-i "input_std" -c:v libx264 -preset medium -b:v 555k -pass 2 -c:a aac -b:a 128k "out_std"
+.avs .mp4

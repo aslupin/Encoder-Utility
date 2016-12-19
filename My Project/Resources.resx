@@ -118,19 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PW" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\imgs\PW.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ZixF2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\imgs\ZixF2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UP1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\imgs\UP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tab2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\imgs\Tab2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ZIXMAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\imgs\ZIXMAR.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\imgs\PW.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ZixF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\imgs\ZixF1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ZixF2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\imgs\ZixF2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UP1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\imgs\UP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\imgs\Tab3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\imgs\Tab1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tab4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\imgs\Tab4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

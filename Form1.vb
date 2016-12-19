@@ -229,6 +229,7 @@ Public Class Form1
     'Open file ASS
     'TextBox2.Text
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        TextBox2_5 = ""
         Dim PathFileAAS As String = ".\avss\stdin_pathass.avs"
         Dim DataAvs_temp As String = System.IO.File.ReadAllText(PathFileAAS)
 
@@ -544,6 +545,7 @@ Public Class Form1
 
             Do
                 If Bgw1.CancellationPending Then ' Have we pressed Cancel?
+                    ' RichTextBox1.Text = "Status : " + ffReader.ReadLine
                     Exit Sub
                 End If
 
@@ -557,7 +559,10 @@ Public Class Form1
         'System.IO.File.Delete(N1pass(nofen))
         '  Next
         ' System.IO.File.Delete(N1pass)
+
         RichTextBox1.Text = "Status : Completed."
+        My.Settings.SaDe = 3
+        Form4.Show()
         Panel2.Size = New Size(872, 31)
         ' RichTextBox1.BackColor = Me.BackColor
         ' RichTextBox1.ForeColor = Color.Black
@@ -662,6 +667,8 @@ Public Class Form1
         Next
         ' System.IO.File.Delete(N1pass)
         RichTextBox2.Text = "Status : Completed."
+        My.Settings.SaDe = 3
+        Form4.Show()
         Panel3.Size = New Size(872, 31)
         checkrunn = 0
         ' RichTextBox1.BackColor = Me.BackColor
@@ -767,6 +774,8 @@ Public Class Form1
         '  Next
         ' System.IO.File.Delete(N1pass)
         RichTextBox3.Text = "Status : Completed."
+        My.Settings.SaDe = 3
+        Form4.Show()
         Panel4.Size = New Size(872, 31)
         ' RichTextBox1.BackColor = Me.BackColor
         ' RichTextBox1.ForeColor = Color.Black
@@ -1003,12 +1012,6 @@ Public Class Form1
         My.Settings.ComboAvs = ComboBox6.SelectedItem.ToString()
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-        Dim oForm As Form5
-        oForm = New Form5()
-        oForm.Show()
-        oForm = Nothing
-    End Sub
 
 
 

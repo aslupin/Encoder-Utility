@@ -29,10 +29,6 @@ D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\bin\Debug\Zixma
 D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\bin\Debug\Zixmar+Fansub Encode Utility Version 0.4.pdb
 D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\bin\Debug\Zixmar+Fansub Encode Utility Version 0.4.xml
 D:\PooN\programming\Vb.net\AS Encode 0.2 Full\AS Encode 0.2 Full\obj\x86\Debug\WindowsApplication1.Form7.resources
-D:\PooN\programming\Github\repositories\ZixEnc\bin\Debug\Zixmar+Fansub Encode Utility Version 0.4.exe.config
-D:\PooN\programming\Github\repositories\ZixEnc\bin\Debug\Zixmar+Fansub Encode Utility Version 0.4.exe
-D:\PooN\programming\Github\repositories\ZixEnc\bin\Debug\Zixmar+Fansub Encode Utility Version 0.4.pdb
-D:\PooN\programming\Github\repositories\ZixEnc\bin\Debug\Zixmar+Fansub Encode Utility Version 0.4.xml
 D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\AS Encode 0.2 Full.vbprojResolveAssemblyReference.cache
 D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\WindowsApplication1.Form1.resources
 D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\WindowsApplication1.Form2.resources
@@ -42,6 +38,12 @@ D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\WindowsApplication1
 D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\WindowsApplication1.Form7.resources
 D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\WindowsApplication1.Resources.resources
 D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\AS Encode 0.2 Full.vbproj.GenerateResource.Cache
-D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\Zixmar+Fansub Encode Utility Version 0.4.exe
-D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\Zixmar+Fansub Encode Utility Version 0.4.xml
-D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\Zixmar+Fansub Encode Utility Version 0.4.pdb
+D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\WindowsApplication1.Form4.resources
+D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\WindowsApplication1.Form8.resources
+D:\PooN\programming\Github\repositories\ZixEnc\bin\Debug\Zixmar+Fansub Encode Utility Version 0.5.exe.config
+D:\PooN\programming\Github\repositories\ZixEnc\bin\Debug\Zixmar+Fansub Encode Utility Version 0.5.exe
+D:\PooN\programming\Github\repositories\ZixEnc\bin\Debug\Zixmar+Fansub Encode Utility Version 0.5.pdb
+D:\PooN\programming\Github\repositories\ZixEnc\bin\Debug\Zixmar+Fansub Encode Utility Version 0.5.xml
+D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\Zixmar+Fansub Encode Utility Version 0.5.exe
+D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\Zixmar+Fansub Encode Utility Version 0.5.xml
+D:\PooN\programming\Github\repositories\ZixEnc\obj\x86\Debug\Zixmar+Fansub Encode Utility Version 0.5.pdb

@@ -170,7 +170,7 @@ Partial Class Form6
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form6"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form6"
+        Me.Text = "New Script - Zixmar+Fansub Encode Utility Version 0.5"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

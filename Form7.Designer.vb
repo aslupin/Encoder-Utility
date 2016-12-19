@@ -172,7 +172,7 @@ Partial Class Form7
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form7"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form7"
+        Me.Text = "Add Plugin - Zixmar+Fansub Encode Utility Version 0.5"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

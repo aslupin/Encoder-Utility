@@ -23,7 +23,6 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -48,20 +47,9 @@ Partial Class Form2
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(719, 2)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(28, 13)
-        Me.Label1.TabIndex = 27
-        Me.Label1.Text = "Help"
         '
         'Label3
         '
@@ -69,7 +57,7 @@ Partial Class Form2
         Me.Label3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(575, 2)
+        Me.Label3.Location = New System.Drawing.Point(609, 2)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 24
@@ -81,7 +69,7 @@ Partial Class Form2
         Me.Label2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label2.Location = New System.Drawing.Point(443, 2)
+        Me.Label2.Location = New System.Drawing.Point(477, 2)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 13)
         Me.Label2.TabIndex = 23
@@ -105,7 +93,7 @@ Partial Class Form2
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label4.Location = New System.Drawing.Point(620, 2)
+        Me.Label4.Location = New System.Drawing.Point(654, 2)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(32, 13)
         Me.Label4.TabIndex = 25
@@ -244,7 +232,7 @@ Partial Class Form2
         Me.Label10.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label10.Location = New System.Drawing.Point(515, 2)
+        Me.Label10.Location = New System.Drawing.Point(549, 2)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(55, 13)
         Me.Label10.TabIndex = 35
@@ -256,7 +244,7 @@ Partial Class Form2
         Me.Label11.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label11.Location = New System.Drawing.Point(657, 2)
+        Me.Label11.Location = New System.Drawing.Point(691, 2)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(58, 13)
         Me.Label11.TabIndex = 36
@@ -299,6 +287,10 @@ Partial Class Form2
         Me.Label14.TabIndex = 40
         Me.Label14.Text = ">"
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -312,7 +304,6 @@ Partial Class Form2
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label6)
@@ -331,15 +322,13 @@ Partial Class Form2
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form2"
+        Me.Text = "Script Editor - Zixmar+Fansub Encode Utility Version 0.5"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label6 As Label
@@ -364,4 +353,5 @@ Partial Class Form2
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

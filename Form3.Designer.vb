@@ -36,6 +36,7 @@ Partial Class Form3
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,22 +121,22 @@ Partial Class Form3
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
-        Me.Button1.Location = New System.Drawing.Point(634, 179)
+        Me.Button1.Location = New System.Drawing.Point(723, 180)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(94, 20)
         Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Cancle"
+        Me.Button1.Text = "Sign up"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
-        Me.Button2.Location = New System.Drawing.Point(523, 179)
+        Me.Button2.Location = New System.Drawing.Point(512, 180)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(94, 20)
         Me.Button2.TabIndex = 12
-        Me.Button2.Text = "SIGN IN"
+        Me.Button2.Text = "Sign in"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Label29
@@ -168,7 +169,7 @@ Partial Class Form3
         Me.PictureBox2.Image = Global.WindowsApplication1.My.Resources.Resources.UP1
         Me.PictureBox2.Location = New System.Drawing.Point(497, 68)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(109, 84)
+        Me.PictureBox2.Size = New System.Drawing.Size(109, 81)
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
         '
@@ -182,12 +183,24 @@ Partial Class Form3
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
+        'Button3
+        '
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
+        Me.Button3.Location = New System.Drawing.Point(618, 180)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(94, 20)
+        Me.Button3.TabIndex = 20
+        Me.Button3.Text = "Guest"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ClientSize = New System.Drawing.Size(854, 248)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label29)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button2)
@@ -205,7 +218,7 @@ Partial Class Form3
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form3"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Zixmar+Fansub Encode Utility Version 0.4"
+        Me.Text = "Sign in - Zixmar+Fansub Encode Utility Version 0.5"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -227,4 +240,5 @@ Partial Class Form3
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Button3 As Button
 End Class

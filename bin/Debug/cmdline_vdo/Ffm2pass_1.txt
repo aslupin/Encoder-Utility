@@ -1,0 +1,3 @@
+ffmpeg
+-y -i "input_std" -c:v libx264 -preset medium -b:v 555k -pass 1 -c:a aac -b:a 128k -f mp4 NUL && \
+NULL

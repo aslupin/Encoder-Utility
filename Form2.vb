@@ -68,7 +68,7 @@ Public Class Form2
         Next
         ComboBox2.SelectedItem = My.Settings.ComboCm
         ComboBox1.SelectedItem = My.Settings.ComboSc
-        TextBox1.Text = System.IO.File.ReadAllText(path_sc + ComboBox2.SelectedItem.ToString() + ".txt")
+        ' TextBox1.Text = File.ReadAllText(path_sc + ComboBox1.SelectedItem.ToString() + ".txt")
 
 
     End Sub
@@ -180,6 +180,7 @@ Public Class Form2
 
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        My.Settings.SaDe = 2
         If My.Settings.Chcom_CmSc = 1 Then
             System.IO.File.Delete(path_sc + ComboBox1.SelectedItem.ToString() + ".txt")
         End If
@@ -187,14 +188,16 @@ Public Class Form2
             System.IO.File.Delete(path_cm + ComboBox2.SelectedItem.ToString() + ".txt")
         End If
 
-
+        Dim f4 As New Form4
         Dim f3 As New Form2
         Me.Close()
         f3.Show()
+        f4.Show()
 
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        My.Settings.SaDe = 1
         If My.Settings.Chcom_CmSc = 1 Then
             If ComboBox1.Text <> "" Then
                 File.WriteAllText(path_sc + ComboBox1.SelectedItem.ToString() + ".txt", TextBox1.Text)
@@ -207,7 +210,7 @@ Public Class Form2
             End If
         End If
 
-
+        Form4.Show()
 
 
         '  File.WriteAllText(path_sc + ComboBox2.SelectedItem.ToString() + ".txt", TextBox1.Text)
@@ -255,8 +258,9 @@ Public Class Form2
     End Sub
     Private Sub ComboBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox1.MouseClick
         If ComboBox1.SelectedItem <> vbNullString Then
-            TextBox1.Text = System.IO.File.ReadAllText(path_sc + ComboBox1.SelectedItem.ToString() + ".txt")
             My.Settings.ComboSc = ComboBox1.SelectedItem.ToString()
+            TextBox1.Text = System.IO.File.ReadAllText(path_sc + ComboBox1.SelectedItem.ToString() + ".txt")
+
 
         End If
 
@@ -266,8 +270,9 @@ Public Class Form2
     End Sub
     Private Sub ComboBox2_MouseClick(sender As Object, e As MouseEventArgs) Handles ComboBox2.MouseClick
         If ComboBox2.SelectedItem <> vbNullString Then
+            My.Settings.ComboCm = ComboBox2.SelectedItem.ToString()
             TextBox1.Text = System.IO.File.ReadAllText(path_cm + ComboBox2.SelectedItem.ToString() + ".txt")
-            My.Settings.ComboSc = ComboBox2.SelectedItem.ToString()
+
 
         End If
 

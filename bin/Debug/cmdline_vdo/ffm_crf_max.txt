@@ -1,0 +1,3 @@
+ffmpeg
+-i "input_std" -c:v libx264 -crf 20 -maxrate 400k -bufsize 1835k "out_std"
+.avs .mp4

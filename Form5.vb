@@ -83,8 +83,11 @@ Public Class Form5
 
         'ComboBox1.GetItemText(My.Settings.ComboAvs)
         ComboBox1.SelectedItem = My.Settings.ComboAvs
-        path = ".\avss\" + ComboBox1.SelectedItem.ToString() + ".avs"
-        TextBox1.Text = System.IO.File.ReadAllText(path)
+        If ComboBox1.SelectedItem <> vbNullString Then
+            path = ".\avss\" + ComboBox1.SelectedItem.ToString() + ".avs"
+            TextBox1.Text = File.ReadAllText(path)
+        End If
+
 
 
     End Sub
@@ -105,21 +108,25 @@ Public Class Form5
 
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        My.Settings.SaDe = 2
         System.IO.File.Delete(".\avss\" + ComboBox1.SelectedItem.ToString() + ".avs")
         Dim f3 As New Form5
+        Dim f4 As New Form4
         ComboBox1.SelectedItem = "none"
         Form1.ComboBox6.Items.Clear()
         Form1.ComboBox6.ResetText()
         Me.Close()
         f3.Show()
+        f4.Show()
         Form1.ComboBox6.Refresh()
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        My.Settings.SaDe = 1
         ' If ComboBox1.SelectedItem = vbNull Then
         File.WriteAllText(".\avss\" + ComboBox1.SelectedItem.ToString() + ".avs", TextBox1.Text)
-            Form1.ComboBox6.Refresh()
-
+        Form1.ComboBox6.Refresh()
+        Form4.Show()
         '    End
         '   My.Settings.ComboSav = ComboBox1.SelectedItem.ToString()
         ' MsgBox(My.Settings.ComboSav.ToString)

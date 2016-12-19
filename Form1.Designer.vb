@@ -36,13 +36,11 @@ Partial Class Form1
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -52,11 +50,11 @@ Partial Class Form1
         Me.Button11 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Button12 = New System.Windows.Forms.Button()
@@ -66,11 +64,11 @@ Partial Class Form1
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Button20 = New System.Windows.Forms.Button()
@@ -83,6 +81,7 @@ Partial Class Form1
         Me.Button18 = New System.Windows.Forms.Button()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Button17 = New System.Windows.Forms.Button()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Process1 = New System.Diagnostics.Process()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -215,7 +214,6 @@ Partial Class Form1
         Me.TabPage1.CausesValidation = False
         Me.TabPage1.Controls.Add(Me.Label13)
         Me.TabPage1.Controls.Add(Me.ComboBox6)
-        Me.TabPage1.Controls.Add(Me.Label5)
         Me.TabPage1.Controls.Add(Me.PictureBox1)
         Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.Button1)
@@ -254,23 +252,13 @@ Partial Class Form1
         Me.ComboBox6.Size = New System.Drawing.Size(225, 20)
         Me.ComboBox6.TabIndex = 46
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
-        Me.Label5.Location = New System.Drawing.Point(579, 124)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(81, 12)
-        Me.Label5.TabIndex = 44
-        Me.Label5.Text = "AviSynth Editor ..."
-        '
         'PictureBox1
         '
         Me.PictureBox1.ErrorImage = Nothing
-        Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources.ZixF2
+        Me.PictureBox1.Image = Global.WindowsApplication1.My.Resources.Resources.Tab1
         Me.PictureBox1.Location = New System.Drawing.Point(16, 124)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(215, 70)
+        Me.PictureBox1.Size = New System.Drawing.Size(301, 70)
         Me.PictureBox1.TabIndex = 18
         Me.PictureBox1.TabStop = False
         '
@@ -280,7 +268,6 @@ Partial Class Form1
         Me.TabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.TabPage2.Controls.Add(Me.RichTextBox1)
         Me.TabPage2.Controls.Add(Me.Panel2)
-        Me.TabPage2.Controls.Add(Me.PictureBox2)
         Me.TabPage2.Controls.Add(Me.Label21)
         Me.TabPage2.Controls.Add(Me.ComboBox1)
         Me.TabPage2.Controls.Add(Me.Label7)
@@ -290,6 +277,7 @@ Partial Class Form1
         Me.TabPage2.Controls.Add(Me.Button11)
         Me.TabPage2.Controls.Add(Me.TextBox3)
         Me.TabPage2.Controls.Add(Me.Button8)
+        Me.TabPage2.Controls.Add(Me.PictureBox2)
         Me.TabPage2.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
@@ -331,16 +319,6 @@ Partial Class Form1
         Me.Label22.TabIndex = 0
         Me.Label22.Text = "Cancel"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.ErrorImage = Nothing
-        Me.PictureBox2.Image = Global.WindowsApplication1.My.Resources.Resources.ZixF2
-        Me.PictureBox2.Location = New System.Drawing.Point(25, 131)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(215, 60)
-        Me.PictureBox2.TabIndex = 48
-        Me.PictureBox2.TabStop = False
-        '
         'Label21
         '
         Me.Label21.AutoSize = True
@@ -373,9 +351,9 @@ Partial Class Form1
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
         Me.Label7.Location = New System.Drawing.Point(51, 60)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(45, 12)
+        Me.Label7.Size = New System.Drawing.Size(70, 12)
         Me.Label7.TabIndex = 24
-        Me.Label7.Text = "Avs input"
+        Me.Label7.Text = "AviSynth Script"
         '
         'TextBox6
         '
@@ -403,9 +381,9 @@ Partial Class Form1
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
         Me.Label1.Location = New System.Drawing.Point(51, 96)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(33, 12)
+        Me.Label1.Size = New System.Drawing.Size(59, 12)
         Me.Label1.TabIndex = 20
-        Me.Label1.Text = "Output"
+        Me.Label1.Text = "Video Output"
         '
         'Button11
         '
@@ -435,15 +413,24 @@ Partial Class Form1
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(78, 24)
         Me.Button8.TabIndex = 13
-        Me.Button8.Text = "Queue"
+        Me.Button8.Text = "Encode"
         Me.Button8.UseVisualStyleBackColor = True
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.ErrorImage = Nothing
+        Me.PictureBox2.Image = Global.WindowsApplication1.My.Resources.Resources.Tab2
+        Me.PictureBox2.Location = New System.Drawing.Point(25, 131)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(303, 60)
+        Me.PictureBox2.TabIndex = 48
+        Me.PictureBox2.TabStop = False
         '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.TabPage3.Controls.Add(Me.RichTextBox2)
         Me.TabPage3.Controls.Add(Me.Panel3)
-        Me.TabPage3.Controls.Add(Me.PictureBox3)
         Me.TabPage3.Controls.Add(Me.Label16)
         Me.TabPage3.Controls.Add(Me.ComboBox2)
         Me.TabPage3.Controls.Add(Me.Button12)
@@ -453,6 +440,7 @@ Partial Class Form1
         Me.TabPage3.Controls.Add(Me.Label12)
         Me.TabPage3.Controls.Add(Me.Button13)
         Me.TabPage3.Controls.Add(Me.Button14)
+        Me.TabPage3.Controls.Add(Me.PictureBox3)
         Me.TabPage3.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
@@ -492,16 +480,6 @@ Partial Class Form1
         Me.Label23.Size = New System.Drawing.Size(40, 13)
         Me.Label23.TabIndex = 53
         Me.Label23.Text = "Cancel"
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.ErrorImage = Nothing
-        Me.PictureBox3.Image = Global.WindowsApplication1.My.Resources.Resources.ZixF2
-        Me.PictureBox3.Location = New System.Drawing.Point(25, 132)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(215, 60)
-        Me.PictureBox3.TabIndex = 51
-        Me.PictureBox3.TabStop = False
         '
         'Label16
         '
@@ -546,9 +524,9 @@ Partial Class Form1
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
         Me.Label11.Location = New System.Drawing.Point(53, 55)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(51, 12)
+        Me.Label11.Size = New System.Drawing.Size(52, 12)
         Me.Label11.TabIndex = 24
-        Me.Label11.Text = "Audio input"
+        Me.Label11.Text = "Audio Input"
         '
         'TextBox8
         '
@@ -574,9 +552,9 @@ Partial Class Form1
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
         Me.Label12.Location = New System.Drawing.Point(53, 91)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(57, 12)
+        Me.Label12.Size = New System.Drawing.Size(55, 12)
         Me.Label12.TabIndex = 20
-        Me.Label12.Text = "Audio output"
+        Me.Label12.Text = "Audio Iutput"
         '
         'Button13
         '
@@ -586,7 +564,7 @@ Partial Class Form1
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(78, 24)
         Me.Button13.TabIndex = 13
-        Me.Button13.Text = "Queue"
+        Me.Button13.Text = "Encode"
         Me.Button13.UseVisualStyleBackColor = True
         '
         'Button14
@@ -600,12 +578,21 @@ Partial Class Form1
         Me.Button14.Text = "Save as"
         Me.Button14.UseVisualStyleBackColor = True
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.ErrorImage = Nothing
+        Me.PictureBox3.Image = Global.WindowsApplication1.My.Resources.Resources.Tab3
+        Me.PictureBox3.Location = New System.Drawing.Point(25, 132)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(327, 60)
+        Me.PictureBox3.TabIndex = 51
+        Me.PictureBox3.TabStop = False
+        '
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.SystemColors.ControlLight
         Me.TabPage4.Controls.Add(Me.RichTextBox3)
         Me.TabPage4.Controls.Add(Me.Panel4)
-        Me.TabPage4.Controls.Add(Me.PictureBox4)
         Me.TabPage4.Controls.Add(Me.Label20)
         Me.TabPage4.Controls.Add(Me.ComboBox3)
         Me.TabPage4.Controls.Add(Me.Button20)
@@ -618,6 +605,7 @@ Partial Class Form1
         Me.TabPage4.Controls.Add(Me.Button18)
         Me.TabPage4.Controls.Add(Me.TextBox9)
         Me.TabPage4.Controls.Add(Me.Button17)
+        Me.TabPage4.Controls.Add(Me.PictureBox4)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(874, 243)
@@ -656,16 +644,6 @@ Partial Class Form1
         Me.Label24.Size = New System.Drawing.Size(40, 13)
         Me.Label24.TabIndex = 58
         Me.Label24.Text = "Cancel"
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.ErrorImage = Nothing
-        Me.PictureBox4.Image = Global.WindowsApplication1.My.Resources.Resources.ZixF2
-        Me.PictureBox4.Location = New System.Drawing.Point(27, 138)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(215, 60)
-        Me.PictureBox4.TabIndex = 56
-        Me.PictureBox4.TabStop = False
         '
         'Label20
         '
@@ -710,9 +688,9 @@ Partial Class Form1
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
         Me.Label10.Location = New System.Drawing.Point(82, 115)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(33, 12)
+        Me.Label10.Size = New System.Drawing.Size(50, 12)
         Me.Label10.TabIndex = 28
-        Me.Label10.Text = "Output"
+        Me.Label10.Text = "File Output"
         '
         'Button16
         '
@@ -747,9 +725,9 @@ Partial Class Form1
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
         Me.Label18.Location = New System.Drawing.Point(80, 79)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(46, 12)
+        Me.Label18.Size = New System.Drawing.Size(52, 12)
         Me.Label18.TabIndex = 20
-        Me.Label18.Text = "Audio File"
+        Me.Label18.Text = "Audio Input"
         '
         'Label17
         '
@@ -757,9 +735,9 @@ Partial Class Form1
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
         Me.Label17.Location = New System.Drawing.Point(80, 43)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(46, 12)
+        Me.Label17.Size = New System.Drawing.Size(52, 12)
         Me.Label17.TabIndex = 24
-        Me.Label17.Text = "Video File"
+        Me.Label17.Text = "Video Input"
         '
         'Button18
         '
@@ -788,8 +766,18 @@ Partial Class Form1
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(78, 24)
         Me.Button17.TabIndex = 13
-        Me.Button17.Text = "Queue"
+        Me.Button17.Text = "Encode"
         Me.Button17.UseVisualStyleBackColor = True
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.ErrorImage = Nothing
+        Me.PictureBox4.Image = Global.WindowsApplication1.My.Resources.Resources.Tab4
+        Me.PictureBox4.Location = New System.Drawing.Point(27, 138)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(307, 60)
+        Me.PictureBox4.TabIndex = 56
+        Me.PictureBox4.TabStop = False
         '
         'Process1
         '
@@ -823,7 +811,7 @@ Partial Class Form1
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label14.Location = New System.Drawing.Point(370, 5)
+        Me.Label14.Location = New System.Drawing.Point(345, 4)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(79, 13)
         Me.Label14.TabIndex = 34
@@ -834,7 +822,7 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(301, 5)
+        Me.Label4.Location = New System.Drawing.Point(432, 4)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(63, 13)
         Me.Label4.TabIndex = 33
@@ -845,7 +833,7 @@ Partial Class Form1
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.5!)
         Me.Label31.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label31.Location = New System.Drawing.Point(751, 3)
+        Me.Label31.Location = New System.Drawing.Point(746, 2)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(59, 12)
         Me.Label31.TabIndex = 32
@@ -856,18 +844,18 @@ Partial Class Form1
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Label19.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label19.Location = New System.Drawing.Point(258, 4)
+        Me.Label19.Location = New System.Drawing.Point(264, 4)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(36, 13)
+        Me.Label19.Size = New System.Drawing.Size(72, 13)
         Me.Label19.TabIndex = 18
-        Me.Label19.Text = "Muxer"
+        Me.Label19.Text = "Other Encode"
         '
         'Label30
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!)
         Me.Label30.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label30.Location = New System.Drawing.Point(694, 3)
+        Me.Label30.Location = New System.Drawing.Point(697, 2)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(48, 12)
         Me.Label30.TabIndex = 31
@@ -878,7 +866,7 @@ Partial Class Form1
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Label15.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label15.Location = New System.Drawing.Point(175, 4)
+        Me.Label15.Location = New System.Drawing.Point(183, 4)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(76, 13)
         Me.Label15.TabIndex = 17
@@ -889,7 +877,7 @@ Partial Class Form1
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label8.Location = New System.Drawing.Point(92, 4)
+        Me.Label8.Location = New System.Drawing.Point(102, 4)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(76, 13)
         Me.Label8.TabIndex = 1
@@ -902,9 +890,9 @@ Partial Class Form1
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label6.Location = New System.Drawing.Point(18, 4)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(64, 13)
+        Me.Label6.Size = New System.Drawing.Size(78, 13)
         Me.Label6.TabIndex = 0
-        Me.Label6.Text = "AVS Setting"
+        Me.Label6.Text = "AviSynth Script"
         '
         'Label9
         '
@@ -956,7 +944,7 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Zixmar+Fansub Encode Utility Version 0.4"
+        Me.Text = "Zixmar+Fansub Encode Utility Version 0.5"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -1032,7 +1020,6 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label30 As System.Windows.Forms.Label
     Friend WithEvents Label31 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents ComboBox6 As ComboBox
     Friend WithEvents Label13 As Label

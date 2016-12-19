@@ -111,9 +111,9 @@ Partial Class Form5
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label1.Location = New System.Drawing.Point(17, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 13)
+        Me.Label1.Size = New System.Drawing.Size(83, 13)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "AviSynth scripts"
+        Me.Label1.Text = "AviSynth Scripts"
         '
         'TextBox1
         '
@@ -174,7 +174,7 @@ Partial Class Form5
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form5"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form5"
+        Me.Text = "AviSynth Editor - Zixmar+Fansub Encode Utility Version 0.5"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

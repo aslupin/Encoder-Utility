@@ -1,0 +1,2 @@
+MODE 1
+ffm_crf_max

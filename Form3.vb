@@ -1,4 +1,6 @@
-﻿Public Class Form3
+﻿Imports System.IO
+
+Public Class Form3
     Dim drag As Boolean = False
     Dim mousex As Integer, mousey As Integer
     Dim use As Long
@@ -71,8 +73,7 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Me.Close()
-        Form1.Close()
+        Form8.Show()
 
     End Sub
 
@@ -86,235 +87,31 @@
             My.Settings.User = TextBox1.Text
             My.Settings.Pass = TextBox2.Text
         End If
+        Dim check_t2 As String = TextBox2.Text
 
-        If TextBox1.Text = "rootzix" And TextBox2.Text = "rootzix" Then
-            Form1.Label31.Text = "ZIXMAR+Fs"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
+        If File.Exists(".\users\" + TextBox1.Text + ".txt") Then
+            If TextBox2.Text = System.IO.File.ReadAllText(".\users\" + TextBox1.Text + ".txt") Then
+                check_t2 = check_t2.ToLower()
+                Dim b As Boolean = check_t2.Contains("zixmar")
+                If b = True Then
+                    Form1.Label31.Text = TextBox1.Text
+                Else
+                    Form1.Label31.Text = TextBox1.Text + "." + TextBox2.Text
+                End If
+
+                Me.Close()
+                Form1.TabControl1.Show()
+                Form1.Panel1.Show()
+                Form1.Label29.Show()
+                Form1.Label9.Show()
+                Form1.WindowState = FormWindowState.Normal
+                Form1.Enabled = True
+                Form1.Opacity = 100
+                ck = 1
+            End If
+
         End If
-        If TextBox1.Text = "AsLupin" And TextBox2.Text = "Zixmar01" Then
-            Form1.Label31.Text = "AsLupin"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "Mr.PokiLoLi" And TextBox2.Text = "Zixmar02" Then
-            Form1.Label31.Text = "Mr.PokiLoLi"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "Setsu" And TextBox2.Text = "Zixmar03" Then
-            Form1.Label31.Text = "Setsu"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "Ai.suu" And TextBox2.Text = "Zixmar04" Then
-            Form1.Label31.Text = "Ai.suu"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "NayamA" And TextBox2.Text = "Zixmar05" Then
-            Form1.Label31.Text = "NayamA"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "MasK" And TextBox2.Text = "Zixmar06" Then
-            Form1.Label31.Text = "MasK"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "FirstStalkerZ" And TextBox2.Text = "Zixmar07" Then
-            Form1.Label31.Text = "FirstStalkerZ"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "HunTNosT" And TextBox2.Text = "Zixmar08" Then
-            Form1.Label31.Text = "HunTNosT"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "iaf" And TextBox2.Text = "Zixmar09" Then
-            Form1.Label31.Text = "iaf"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "Shouji" And TextBox2.Text = "Zixmar10" Then
-            Form1.Label31.Text = "Shouji"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "Shiro" And TextBox2.Text = "Zixmar11" Then
-            Form1.Label31.Text = "Shiro"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "Kingyo" And TextBox2.Text = "Zixmar12" Then
-            Form1.Label31.Text = "Kingyo"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "Zoronoa" And TextBox2.Text = "Zixmar13" Then
-            Form1.Label31.Text = "Zoronoa"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "SebastianAs" And TextBox2.Text = "Zixmar14" Then
-            Form1.Label31.Text = "SebastianAs"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "Taiki" And TextBox2.Text = "Zixmar15" Then
-            Form1.Label31.Text = "Taiki"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "snDiesy" And TextBox2.Text = "Zixmar16" Then
-            Form1.Label31.Text = "snDiesy"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "kress" And TextBox2.Text = "Zixmar17" Then
-            Form1.Label31.Text = "kress"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
-        If TextBox1.Text = "iNep" And TextBox2.Text = "Zixmar18" Then
-            Form1.Label31.Text = "iNep"
-            Me.Close()
-            Form1.TabControl1.Show()
-            Form1.Panel1.Show()
-            Form1.Label29.Show()
-            Form1.Label9.Show()
-            Form1.WindowState = FormWindowState.Normal
-            Form1.Enabled = True
-            Form1.Opacity = 100
-            ck = 1
-        End If
+
 
         If TextBox1.Text = vbNullString Or TextBox2.Text = vbNullString Then
             ck = 1
@@ -382,6 +179,19 @@
 
     Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
 
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Form1.Label31.Text = "Guest"
+        Me.Close()
+        Form1.TabControl1.Show()
+        Form1.Panel1.Show()
+        Form1.Label29.Show()
+        Form1.Label9.Show()
+        Form1.WindowState = FormWindowState.Normal
+        Form1.Enabled = True
+        Form1.Opacity = 100
+        ck = 1
     End Sub
 
     Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave

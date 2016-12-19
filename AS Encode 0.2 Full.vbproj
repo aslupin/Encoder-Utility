@@ -10,14 +10,14 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
     <RootNamespace>WindowsApplication1</RootNamespace>
-    <AssemblyName>Zixmar+Fansub Encode Utility Version 0.4</AssemblyName>
+    <AssemblyName>Zixmar+Fansub Encode Utility Version 0.5</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\Zixmar+Fansub Encode Utility Version 0.4\</PublishUrl>
-    <Install>true</Install>
+    <PublishUrl>C:\Users\Administrator.100X64\Desktop\</PublishUrl>
+    <Install>false</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
@@ -25,12 +25,12 @@
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
+    <MapFileExtensions>false</MapFileExtensions>
     <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,7 +39,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Zixmar+Fansub Encode Utility Version 0.4.xml</DocumentationFile>
+    <DocumentationFile>Zixmar+Fansub Encode Utility Version 0.5.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -49,7 +49,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Zixmar+Fansub Encode Utility Version 0.4.xml</DocumentationFile>
+    <DocumentationFile>Zixmar+Fansub Encode Utility Version 0.5.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -88,6 +88,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -127,6 +128,12 @@
     <Compile Include="Form3.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form4.Designer.vb">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form5.Designer.vb">
       <DependentUpon>Form5.vb</DependentUpon>
     </Compile>
@@ -143,6 +150,12 @@
       <DependentUpon>Form7.vb</DependentUpon>
     </Compile>
     <Compile Include="Form7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.vb">
+      <DependentUpon>Form8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -172,6 +185,9 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.vb</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -235,6 +254,10 @@
   <ItemGroup>
     <Content Include="ADappweb180.ico" />
     <None Include="bin\Debug\imgs\ZixF2.jpg" />
+    <None Include="bin\Debug\imgs\Tab1.jpg" />
+    <None Include="bin\Debug\imgs\Tab2.jpg" />
+    <None Include="bin\Debug\imgs\Tab3.jpg" />
+    <None Include="bin\Debug\imgs\Tab4.jpg" />
     <Content Include="bin\Debug\plugins\Convolution3DYV12.dll" />
     <Content Include="bin\Debug\plugins\vsfilter-aegisub32.dll" />
     <Content Include="bin\Debug\plugins\VSFilter.dll" />
