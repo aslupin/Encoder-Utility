@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.ComponentModel
+Imports System.IO
 Imports System.Security.Permissions
 Imports System.Text.RegularExpressions
 Imports System.Threading
@@ -415,42 +416,17 @@ Public Class Form1
         TextBox6.Text = saveFileDialog2.FileName
 
     End Sub
-    Private Sub Button9_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim Asss As String
 
-        If p1 = 1 Then
-            Asss = "--pass 1 --bitrate " + BitRx264 + " --stats "".stats""" & " --output ""NUL"" " & """" + TSave & """" & Environment.NewLine &
-                "--pass 2 --bitrate " + BitRx264 + " --stats "".stats""" & " --output """ + TextBox6.Text & """ " & """" + TSave & """"
-        End If
-        If p1 = 2 Then
-            Asss = "--pass 1 --bitrate " + BitRx264 & " --stats "".stats""" & " --output """ + TextBox6.Text & """ " & """" + TSave & """"
-        End If
-        If p1 = 3 Then
-            Asss = "--bitrate " + BitRx264 & " --output """ + TextBox6.Text & """ """ + TSave & """"
 
-        End If
-        ' MsgBox(Asss)
-    End Sub
-    Shared Function GetProcess(ByVal process As String, ByVal param As String) As String
-        Dim p As Process = New Process
-        p.StartInfo.FileName = process
-        p.StartInfo.Arguments = param
-        p.StartInfo.UseShellExecute = False
-        p.StartInfo.RedirectStandardOutput = True
-        p.Start()
-        Dim output As String = p.StandardOutput.ReadToEnd
-        p.WaitForExit()
-        Return output
-    End Function
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ' While Not oProcess.HasExited
-        '  Label14.Text = oProcess.StandardOutput.ReadToEnd()
-        Dim Thread_process As New Thread(AddressOf Enprocess1) 'Enprocess
-        Thread_process.Start()
-        ' End While
-        'ProgressBar1.Increment(Incre)
+    ' Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    ' While Not oProcess.HasExited
+    '  Label14.Text = oProcess.StandardOutput.ReadToEnd()
+    'Dim Thread_process As New Thread(AddressOf Enprocess1) 'Enprocess
+    ' Thread_process.Start()
+    ' End While
+    'ProgressBar1.Increment(Incre)
 
-    End Sub
+    ' End Sub
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
         checkrunn = 1
         RichTextBox1.Text = "Status : Loading.."
@@ -561,13 +537,17 @@ Public Class Form1
         ' System.IO.File.Delete(N1pass)
 
         RichTextBox1.Text = "Status : Completed."
-        My.Settings.SaDe = 3
-        Form4.Show()
+
+
         Panel2.Size = New Size(872, 31)
         ' RichTextBox1.BackColor = Me.BackColor
         ' RichTextBox1.ForeColor = Color.Black
         checkrunn = 0
 
+
+    End Sub
+    Private Sub Show4()
+        Form4.Show()
     End Sub
     Private Sub Enprocess_3()
 
@@ -667,8 +647,7 @@ Public Class Form1
         Next
         ' System.IO.File.Delete(N1pass)
         RichTextBox2.Text = "Status : Completed."
-        My.Settings.SaDe = 3
-        Form4.Show()
+
         Panel3.Size = New Size(872, 31)
         checkrunn = 0
         ' RichTextBox1.BackColor = Me.BackColor
@@ -774,8 +753,7 @@ Public Class Form1
         '  Next
         ' System.IO.File.Delete(N1pass)
         RichTextBox3.Text = "Status : Completed."
-        My.Settings.SaDe = 3
-        Form4.Show()
+
         Panel4.Size = New Size(872, 31)
         ' RichTextBox1.BackColor = Me.BackColor
         ' RichTextBox1.ForeColor = Color.Black
@@ -784,10 +762,23 @@ Public Class Form1
     Private Sub Enprocess1()
 
     End Sub
+    Private Sub Bgw1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles Bgw1.RunWorkerCompleted
+        My.Settings.SaDe = 3
+        Form4.Show()
+    End Sub
+    Private Sub Bgw2_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles Bgw2.RunWorkerCompleted
+        My.Settings.SaDe = 3
+        Form4.Show()
+    End Sub
+    Private Sub Bgw3_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles Bgw3.RunWorkerCompleted
+        My.Settings.SaDe = 3
+        Form4.Show()
+    End Sub
 
     Private Sub Bgw1_DoWork(ByVal sender As System.Object,
     ByVal e As System.ComponentModel.DoWorkEventArgs) Handles Bgw1.DoWork
         Enprocess_2()
+
     End Sub
     Private Sub Bgw2_DoWork(ByVal sender As System.Object,
     ByVal e As System.ComponentModel.DoWorkEventArgs) Handles Bgw2.DoWork
@@ -1010,16 +1001,6 @@ Public Class Form1
 
     Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox6.SelectedIndexChanged
         My.Settings.ComboAvs = ComboBox6.SelectedItem.ToString()
-    End Sub
-
-
-
-
-    Private Sub ComboBox6_Enter(sender As Object, e As EventArgs) Handles ComboBox6.Enter
-
-
-
-
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
