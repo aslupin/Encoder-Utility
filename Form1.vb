@@ -763,9 +763,15 @@ Public Class Form1
 
     End Sub
     Private Sub Bgw1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles Bgw1.RunWorkerCompleted
+
         My.Settings.SaDe = 3
-        Form4.Show()
+            Form4.Show()
+
     End Sub
+    '   Private Sub Bgw1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles Bgw1.RunWorkerCompleted
+    '  My.Settings.SaDe = 3
+    '   Form4.Show()
+    ' End Sub
     Private Sub Bgw2_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles Bgw2.RunWorkerCompleted
         My.Settings.SaDe = 3
         Form4.Show()
