@@ -431,7 +431,7 @@ Public Class Form1
         checkrunn = 1
         RichTextBox1.Text = "Status : Loading.."
         Label22.Show()
-        text_queue = System.IO.File.ReadAllText(".\scripts_vdo\" + ComboBox1.SelectedItem.ToString() + ".txt")
+        text_queue = File.ReadAllText(".\scripts_vdo\" + ComboBox1.SelectedItem.ToString() + ".txt")
 
         Bgw1.RunWorkerAsync()
 
@@ -452,11 +452,11 @@ Public Class Form1
         Dim arguments_process(nOfQueue + 1) As String
 
         For value As Integer = 1 To nOfQueue
-            strArr_queue(value) = System.IO.File.ReadAllText(".\cmdline_vdo\" + parts(value) + ".txt")
+            strArr_queue(value) = File.ReadAllText(".\cmdline_vdo\" + parts(value) + ".txt")
             Dim temp_strarr As String() = strArr_queue(value).Split(New String() {Environment.NewLine}, StringSplitOptions.None)
             ' MsgBox(temp_strarr(0) + vbNewLine + temp_strarr(1))
 
-            path_process(value) = System.IO.File.ReadAllText(".\path_tools\" + temp_strarr(0) + ".txt")
+            path_process(value) = File.ReadAllText(".\path_tools\" + temp_strarr(0) + ".txt")
             arguments_process(value) = temp_strarr(1)
             OutType(value) = temp_strarr(2)
 
@@ -564,11 +564,11 @@ Public Class Form1
         Dim arguments_process(nOfQueue + 1) As String
 
         For value As Integer = 1 To nOfQueue
-            strArr_queue(value) = System.IO.File.ReadAllText(".\cmdline_aud\" + parts(value) + ".txt")
+            strArr_queue(value) = File.ReadAllText(".\cmdline_aud\" + parts(value) + ".txt")
             Dim temp_strarr As String() = strArr_queue(value).Split(New String() {Environment.NewLine}, StringSplitOptions.None)
             ' MsgBox(temp_strarr(0) + vbNewLine + temp_strarr(1))
 
-            path_process(value) = System.IO.File.ReadAllText(".\path_tools\" + temp_strarr(0) + ".txt")
+            path_process(value) = File.ReadAllText(".\path_tools\" + temp_strarr(0) + ".txt")
             arguments_process(value) = temp_strarr(1)
             OutType(value) = temp_strarr(2)
 
@@ -643,7 +643,7 @@ Public Class Form1
         Next
 
         For nofen = 1 To nOfQueue - 1
-            System.IO.File.Delete(N1pass(nofen))
+            File.Delete(N1pass(nofen))
         Next
         ' System.IO.File.Delete(N1pass)
         RichTextBox2.Text = "Status : Completed."
@@ -669,11 +669,11 @@ Public Class Form1
         Dim arguments_process(nOfQueue + 1) As String
 
         For value As Integer = 1 To nOfQueue
-            strArr_queue(value) = System.IO.File.ReadAllText(".\cmdline_etc\" + parts(value) + ".txt")
+            strArr_queue(value) = File.ReadAllText(".\cmdline_etc\" + parts(value) + ".txt")
             Dim temp_strarr As String() = strArr_queue(value).Split(New String() {Environment.NewLine}, StringSplitOptions.None)
             ' MsgBox(temp_strarr(0) + vbNewLine + temp_strarr(1))
 
-            path_process(value) = System.IO.File.ReadAllText(".\path_tools\" + temp_strarr(0) + ".txt")
+            path_process(value) = File.ReadAllText(".\path_tools\" + temp_strarr(0) + ".txt")
             arguments_process(value) = temp_strarr(1)
             OutType(value) = temp_strarr(2)
 
